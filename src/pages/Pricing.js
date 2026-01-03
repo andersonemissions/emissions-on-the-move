@@ -31,7 +31,10 @@ const Pricing = () => {
                 <Check size={16} /> Digital certificate
               </li>
             </ul>
-            <Link to="/book-now" className="btn btn-primary full-width">
+            <Link
+              to="/book-now?type=exact"
+              className="btn btn-primary full-width"
+            >
               Book Exact Time
             </Link>
           </div>
@@ -56,8 +59,11 @@ const Pricing = () => {
                 <Check size={16} /> Digital certificate
               </li>
             </ul>
-            <Link to="/contact" className="btn btn-primary full-width">
-              Request Flexible Time
+            <Link
+              to="/book-now?type=flexible"
+              className="btn btn-primary full-width"
+            >
+              Book Flexible Window
             </Link>
           </div>
         </div>

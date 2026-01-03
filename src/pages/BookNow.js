@@ -1,14 +1,52 @@
 import React from "react";
+import { useSearchParams, Link } from "react-router-dom";
 
 const BookNow = () => {
-  // Just the path part of your Cal.com link (username/event-type)
-  const calComLink = "jacob-hair-mjvgfx/30min";
+  const [searchParams] = useSearchParams();
+  const bookingType = searchParams.get("type") || "exact";
+
+  // Configure your Cal.com event types here
+  const calComEvents = {
+    exact: "jacob-hair-mjvgfx/30min", // $70 - Exact time
+    flexible: "jacob-hair-mjvgfx/2-hour-window", // $60 - Flexible window (create this in Cal.com)
+  };
+
+  const calComLink = calComEvents[bookingType] || calComEvents.exact;
+  const isExact = bookingType === "exact";
 
   return (
     <div className="page book-now-page">
       <div className="container">
         <h1>Book Your Inspection</h1>
-        <p className="subtitle">Choose a time that works for you.</p>
+
+        {/* Booking Type Tabs */}
+        <div
+          style={{
+            display: "flex",
+            gap: "1rem",
+            marginBottom: "1rem",
+            justifyContent: "center",
+          }}
+        >
+          <Link
+            to="/book-now?type=exact"
+            className={`btn ${isExact ? "btn-primary" : "btn-outline"}`}
+          >
+            Exact Time ($70)
+          </Link>
+          <Link
+            to="/book-now?type=flexible"
+            className={`btn ${!isExact ? "btn-primary" : "btn-outline"}`}
+          >
+            Flexible Window ($60)
+          </Link>
+        </div>
+
+        <p className="subtitle" style={{ marginBottom: "1rem" }}>
+          {isExact
+            ? "Choose your exact appointment time."
+            : "Select a 2-hour window and we'll arrive within that time."}
+        </p>
 
         {calComLink ? (
           /* Cal.com Embed - Full Screen */
