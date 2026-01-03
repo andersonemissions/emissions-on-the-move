@@ -11,19 +11,21 @@ const BookNow = () => {
         <p className="subtitle">Choose a time that works for you.</p>
 
         {calComLink ? (
-          /* Cal.com Embed */
+          /* Cal.com Embed - Full Screen */
           <div
             className="calendar-container"
-            style={{ width: "100%", minHeight: "600px" }}
+            style={{
+              width: "100%",
+              height: "calc(100vh - 200px)",
+              minHeight: "500px",
+            }}
           >
             <iframe
               src={`https://cal.com/${calComLink}`}
               style={{
                 width: "100%",
-                height: "600px",
+                height: "100%",
                 border: "none",
-                borderRadius: "8px",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
               }}
               title="Book an Appointment"
             ></iframe>

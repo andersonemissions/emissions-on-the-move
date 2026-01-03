@@ -12,13 +12,17 @@ const Pricing = () => {
         </p>
 
         <div className="pricing-cards">
+          {/* Exact Time Option */}
           <div className="pricing-card">
-            <h3>Standard Inspection</h3>
-            <div className="price">$40</div>
+            <h3>Exact Time</h3>
+            <div className="price">$70</div>
             <p className="price-desc">per vehicle</p>
             <ul className="features-list">
               <li>
-                <Check size={16} /> On-site inspection
+                <Check size={16} /> Choose your exact appointment time
+              </li>
+              <li>
+                <Check size={16} /> On-site mobile inspection
               </li>
               <li>
                 <Check size={16} /> Instant results
@@ -26,38 +30,54 @@ const Pricing = () => {
               <li>
                 <Check size={16} /> Digital certificate
               </li>
-              <li>
-                <Check size={16} /> DMV renewal support
-              </li>
             </ul>
             <Link to="/book-now" className="btn btn-primary full-width">
-              Book Standard
+              Book Exact Time
             </Link>
           </div>
 
+          {/* Flexible Window Option */}
           <div className="pricing-card featured">
             <div className="tag">Best Value</div>
-            <h3>Fleet / Multi-Car</h3>
-            <div className="price">$35</div>
-            <p className="price-desc">per vehicle (3+ cars)</p>
+            <h3>Flexible Window</h3>
+            <div className="price">$60</div>
+            <p className="price-desc">per vehicle</p>
             <ul className="features-list">
               <li>
-                <Check size={16} /> Disounted rate
+                <Check size={16} /> 2-hour arrival window
               </li>
               <li>
-                <Check size={16} /> Priority scheduling
+                <Check size={16} /> On-site mobile inspection
               </li>
               <li>
-                <Check size={16} /> Monthly billing available
+                <Check size={16} /> Instant results
               </li>
               <li>
-                <Check size={16} /> Dedicated account manager
+                <Check size={16} /> Digital certificate
               </li>
             </ul>
             <Link to="/contact" className="btn btn-primary full-width">
-              Contact for Fleet
+              Request Flexible Time
             </Link>
           </div>
+        </div>
+
+        {/* Additional Cars Note */}
+        <div
+          className="pricing-note"
+          style={{
+            marginTop: "2rem",
+            padding: "1.5rem",
+            backgroundColor: "#f0fff4",
+            borderRadius: "12px",
+            textAlign: "center",
+            border: "1px solid #c6f6d5",
+          }}
+        >
+          <p style={{ margin: 0, fontSize: "1.1rem", color: "#276749" }}>
+            <strong>🚗 Multiple Cars?</strong> Additional vehicles at the same
+            location are only <strong>$40 each!</strong>
+          </p>
         </div>
       </div>
     </div>
