@@ -1,9 +1,8 @@
 import React from "react";
 
 const BookNow = () => {
-  // TODO: Replace this with your actual Cal.com username/event-type
-  // Example: "your-username/emissions-inspection"
-  const calComLink = null; // Set to something like "monson-emissions/standard-inspection"
+  // Just the path part of your Cal.com link (username/event-type)
+  const calComLink = "jacob-hair-mjvgfx/30min";
 
   return (
     <div className="page book-now-page">
