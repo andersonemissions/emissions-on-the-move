@@ -7,7 +7,7 @@ const BookNow = () => {
 
   // Configure your Cal.com event types here
   const calComEvents = {
-    exact: "jacob-hair-mjvgfx/30min", // $70 - Exact time
+    exact: "jacob-hair-mjvgfx/exact-time", // $70 - Exact time
     flexible: "jacob-hair-mjvgfx/2-hour-window", // $60 - Flexible window (create this in Cal.com)
   };
 
