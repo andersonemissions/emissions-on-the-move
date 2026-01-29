@@ -25,29 +25,33 @@ const FAQItem = ({ question, answer }) => {
 const FAQ = () => {
   const faqs = [
     {
+      question: "Where can I get my test done?",
+      answer: "Anywhere in Utah County!",
+    },
+    {
       question: "Do I need to be present for the inspection?",
       answer:
-        "Yes, we need someone to provide the keys and access to the vehicle, but it only takes a few minutes of your time.",
+        "Nope! Just hand us the keys and we'll bring them back with your test result in 15 minutes or less.",
     },
     {
       question: "How long does the test take?",
       answer:
-        "The actual emissions test typically takes about 10-15 minutes per vehicle.",
+        "Once we have the keys we should be all done and on our way within 15 minutes.",
     },
     {
       question: "What areas do you serve?",
       answer:
-        "We currently serve the greater metro area. Please contact us if you are unsure if you are in our service range.",
+        "Currently we're only serving for vehicles being registered in Utah county.",
     },
     {
       question: "What happens if my car fails?",
       answer:
-        "We will provide you with a detailed report explaining the failure. You can repair the issue and schedule a re-test with us.",
+        "We will provide the failed report and explain why it failed and what options you have to fix it. we'll also provide a free retest within 60 days at no charge to you.",
     },
     {
       question: "Do you offer fleet services?",
       answer:
-        "Yes! We offer special pricing and scheduling for business fleets. Check our Pricing page for more info.",
+        "Yes! We offer special pricing and scheduling for business fleets. Check our Pricing page for more info or give us a call! 385-392-6701",
     },
   ];
 

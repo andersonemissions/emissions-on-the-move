@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -35,13 +35,24 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <ul>
             <li>
-              <Phone size={16} /> <span>(555) 123-4567</span>
+              <Phone size={16} /> <span>(385) 392-6701</span>
             </li>
             <li>
-              <Mail size={16} /> <span>info@emissionsonthemove.com</span>
+              <Mail size={16} /> <span>andersonemissions@gmail.com</span>
             </li>
             <li>
-              <MapPin size={16} /> <span>Serving the Greater Metro Area</span>
+              <Instagram size={16} />
+              <a
+                href="https://instagram.com/emissionsonthemove"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @emissionsonthemove
+              </a>
+            </li>
+            <li>
+              <MapPin size={16} />{" "}
+              <span>Vehicle emissions testing for Utah County.</span>
             </li>
           </ul>
         </div>

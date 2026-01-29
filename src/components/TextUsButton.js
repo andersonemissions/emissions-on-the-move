@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 
 const TextUsButton = () => {
   // Replace with the actual business phone number
-  const phoneNumber = "5551234567";
+  const phoneNumber = "3853926701";
 
   return (
     <a href={`sms:${phoneNumber}`} className="text-us-btn" aria-label="Text Us">

@@ -7,13 +7,16 @@ const Home = () => {
     <div className="page home-page">
       <section className="hero">
         <div className="hero-content">
-          <h1>Fast, Mobile Car Emissions Testing</h1>
-          <p>Skip the line. We come to your home or office.</p>
+          <h1>
+            Emissions Due? <br />
+            We Come To You!
+          </h1>
+          <p>Currently serving anywhere in Utah County.</p>
           <div className="hero-buttons">
             <Link to="/book-now" className="btn btn-primary">
               Book Now
             </Link>
-            <Link to="/pricing" className="btn btn-outline">
+            <Link to="/pricing" className="btn btn-primary">
               View Pricing
             </Link>
           </div>
@@ -24,19 +27,26 @@ const Home = () => {
         <div className="feature-card">
           <Clock size={40} className="feature-icon" />
           <h3>Save Time</h3>
-          <p>No waiting in lines. We schedule a time that works for you.</p>
+          <p>
+            No waiting in lines! Schedule a time that works for you and we'll be
+            there!
+          </p>
         </div>
         <div className="feature-card">
           <MapPin size={40} className="feature-icon" />
           <h3>We Come to You</h3>
           <p>
-            Service available at your home, workplace, or anywhere convenient.
+            We'll service your car wherever you're at! Home, Work, and anywhere
+            inbetween.
           </p>
         </div>
         <div className="feature-card">
           <CheckCircle size={40} className="feature-icon" />
           <h3>Certified Service</h3>
-          <p>Fully licensed and certified inspectors for all testing needs.</p>
+          <p>
+            Licensed and certified technicians you can trust for all your
+            Emissions and Registration needs.
+          </p>
         </div>
       </section>
 
@@ -44,9 +54,9 @@ const Home = () => {
         <div className="container">
           <h2>Why Choose Us?</h2>
           <p>
-            Emissions on the Move is dedicated to making vehicle inspections
-            hassle-free. Our mobile service brings the inspection station to
-            your driveway, saving you valuable time and effort.
+            Emissions on the Move is dedicated to making your registration and
+            renewal hassle-free. Our mobile service brings the inspection
+            station to wherever you're at, saving you valuable time and effort.
           </p>
         </div>
       </section>

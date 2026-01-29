@@ -41,7 +41,7 @@ const Contact = () => {
             <Mail className="icon" size={24} />
             <div>
               <h3>Email</h3>
-              <p>info@emissionsonthemove.com</p>
+              <p>andersonemissions@gmail.com</p>
             </div>
           </div>
         </div>

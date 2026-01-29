@@ -10,10 +10,12 @@ import Contact from "./pages/Contact";
 import "./App.css";
 
 import TextUsButton from "./components/TextUsButton";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navbar />
         <main>
