@@ -74,13 +74,13 @@ const Pricing = () => {
           style={{
             marginTop: "2rem",
             padding: "1.5rem",
-            backgroundColor: "#f0fff4",
+            backgroundColor: "#E6F5ED",
             borderRadius: "12px",
             textAlign: "center",
-            border: "1px solid #c6f6d5",
+            border: "1px solid #009F4D",
           }}
         >
-          <p style={{ margin: 0, fontSize: "1.1rem", color: "#276749" }}>
+          <p style={{ margin: 0, fontSize: "1.1rem", color: "#007638" }}>
             <strong>🚗 Multiple vehicles?</strong> Add additional vehicles at
             $40 each!
           </p>

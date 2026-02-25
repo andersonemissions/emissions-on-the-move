@@ -1,12 +1,12 @@
 :root {
   /* Colors */
-  --primary: #059669; /* Emerald 600 */
-  --primary-hover: #047857; /* Emerald 700 */
-  --secondary: #10b981; /* Emerald 500 */
-  --accent: #047857; /* Emerald 100 */
-  --bg-mint: #ecfdf5; /* Emerald 50 - Background Tint */
+  --primary: #009F4D; /* Pantone 7482 C */
+  --primary-hover: #008540; /* Pantone 7482 C - Hover */
+  --secondary: #00B357; /* Pantone 7482 C - Secondary */
+  --accent: #007638; /* Pantone 7482 C - Accent */
+  --bg-mint: #E6F5ED; /* Pantone 7482 C - Background Tint */
   --dark: #1f2937; /* Gray 800 */
-  --dark-footer: #064e3b; /* Emerald 900 - Rich Footer */
+  --dark-footer: #00381B; /* Pantone 7482 C - Rich Footer */
   --light: #f9fafb; /* Gray 50 */
   --white: #ffffff;
   --text-main: #374151; /* Gray 700 */
@@ -152,15 +152,19 @@ ul {
   color: var(--primary);
 }
 
-.nav-button {
+.nav-item.nav-button {
   background: var(--primary);
   color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
 }
 
-.nav-button:hover {
+.nav-item.nav-button:hover {
   background: var(--primary-hover);
+  color: var(--white);
+}
+
+.nav-item.nav-button.active {
   color: var(--white);
 }
 

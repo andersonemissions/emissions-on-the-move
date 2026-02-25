@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Car } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import "../App.css"; // Ensure we have access to styles
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +24,12 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={() => setIsOpen(false)}>
-          <Car className="logo-icon" size={28} />
-          <span>Emissions on the Move</span>
+          <img
+            src={logo}
+            alt="Emissions on the Move Logo"
+            className="logo-icon"
+            style={{ height: "50px", width: "auto" }}
+          />
         </Link>
 
         {/* Desktop Menu */}
