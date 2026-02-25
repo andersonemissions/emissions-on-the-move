@@ -33,11 +33,7 @@ const FAQ = () => {
       answer:
         "Nope! Just hand us the keys and we'll bring them back with your test result in 15 minutes or less.",
     },
-    {
-      question: "How long does the test take?",
-      answer:
-        "Once we have the keys we should be all done and on our way within 15 minutes.",
-    },
+
     {
       question: "What areas do you serve?",
       answer:
@@ -46,7 +42,7 @@ const FAQ = () => {
     {
       question: "What happens if my car fails?",
       answer:
-        "We will provide the failed report and explain why it failed and what options you have to fix it. we'll also provide a free retest within 60 days at no charge to you.",
+        "We will print the failed report, explain it, and provide a list of potential solutions. We’ll also provide a complimentary retest within 60 days at no cost to you!",
     },
     {
       question: "Do you offer fleet services?",

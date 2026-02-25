@@ -81,8 +81,8 @@ const Pricing = () => {
           }}
         >
           <p style={{ margin: 0, fontSize: "1.1rem", color: "#276749" }}>
-            <strong>🚗 Multiple Cars?</strong> Additional vehicles at the same
-            location are only <strong>$40 each!</strong>
+            <strong>🚗 Multiple vehicles?</strong> Add additional vehicles at
+            $40 each!
           </p>
         </div>
       </div>

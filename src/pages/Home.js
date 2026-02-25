@@ -11,7 +11,7 @@ const Home = () => {
             Emissions Due? <br />
             We Come To You!
           </h1>
-          <p>Currently serving anywhere in Utah County.</p>
+          <p>All of utah county</p>
           <div className="hero-buttons">
             <Link to="/book-now" className="btn btn-primary">
               Book Now
@@ -28,7 +28,7 @@ const Home = () => {
           <Clock size={40} className="feature-icon" />
           <h3>Save Time</h3>
           <p>
-            No waiting in lines! Schedule a time that works for you and we'll be
+            Skip the lines! Schedule a time that works for you and we'll be
             there!
           </p>
         </div>
@@ -36,8 +36,8 @@ const Home = () => {
           <MapPin size={40} className="feature-icon" />
           <h3>We Come to You</h3>
           <p>
-            We'll service your car wherever you're at! Home, Work, and anywhere
-            inbetween.
+            We'll service your car wherever you're at! Home, Work, Anywhere you
+            need.
           </p>
         </div>
         <div className="feature-card">
