@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.7285f0bb.css",
+    "main.css": "/static/css/main.738fe630.css",
     "main.js": "/static/js/main.bd207658.js",
     "static/js/453.dfa657df.chunk.js": "/static/js/453.dfa657df.chunk.js",
+    "static/media/emissions-on-the-move_car-img.PNG": "/static/media/emissions-on-the-move_car-img.dcd759e7d4342c8e235c.PNG",
     "index.html": "/index.html",
-    "main.7285f0bb.css.map": "/static/css/main.7285f0bb.css.map",
+    "main.738fe630.css.map": "/static/css/main.738fe630.css.map",
     "main.bd207658.js.map": "/static/js/main.bd207658.js.map",
     "453.dfa657df.chunk.js.map": "/static/js/453.dfa657df.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7285f0bb.css",
+    "static/css/main.738fe630.css",
     "static/js/main.bd207658.js"
   ]
 }
