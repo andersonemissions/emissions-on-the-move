@@ -209,7 +209,7 @@ ul {
   font-weight: 800;
   letter-spacing: -1px;
   line-height: 1.1;
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .hero-content p {
@@ -441,7 +441,7 @@ ul {
 /* -- Footer -- */
 .footer {
   background: var(--dark-footer);
-  color: var(--white);
+  color: var(--primary);
   padding: var(--spacing-xl) 0 var(--spacing-lg);
   margin-top: auto;
 }
@@ -459,29 +459,29 @@ ul {
 }
 .footer h4 {
   margin-bottom: var(--spacing-md);
-  color: var(--white);
+  color: var(--primary);
 }
 .footer ul li {
   margin-bottom: var(--spacing-sm);
 }
 .footer a {
-  color: #9ca3af;
+  color: var(--primary);
   transition: color 0.2s;
 }
 .footer a:hover {
-  color: var(--white);
+  color: var(--primary-hover);
 }
 .footer-section.contact li {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  color: #9ca3af;
+  color: var(--primary);
 }
 .footer-bottom {
   border-top: 1px solid #374151;
   text-align: center;
   padding-top: var(--spacing-lg);
-  color: #9ca3af;
+  color: var(--primary);
   font-size: 0.875rem;
 }
 

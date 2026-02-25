@@ -11,7 +11,7 @@ const Home = () => {
             Emissions Due? <br />
             We Come To You!
           </h1>
-          <p>All of utah county</p>
+          <p>Currently serving all of utah county!</p>
           <div className="hero-buttons">
             <Link to="/book-now" className="btn btn-primary">
               Book Now
