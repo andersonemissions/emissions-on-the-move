@@ -8,15 +8,15 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>
-            Emissions Due? <br />
-            We Come To You!
+            <span className="text-white">Coming soon!</span>
           </h1>
-          <p>Currently serving all of utah county!</p>
+          <h3 className="text-white hero-tagline">Check back shortly for our official opening!</h3>
+          <p className="hero-subtitle">Serving all of Utah county!</p>
           <div className="hero-buttons">
             <Link to="/book-now" className="btn btn-primary">
               Book Now
             </Link>
-            <Link to="/pricing" className="btn btn-primary">
+            <Link to="/pricing" className="btn btn-outline-white">
               View Pricing
             </Link>
           </div>
@@ -28,7 +28,7 @@ const Home = () => {
           <Clock size={40} className="feature-icon" />
           <h3>Save Time</h3>
           <p>
-            Skip the lines! Schedule a time that works for you and we'll be
+            Skip the lines! Schedule a time that works best for you and we'll be
             there!
           </p>
         </div>
@@ -56,7 +56,7 @@ const Home = () => {
           <p>
             Emissions on the Move is dedicated to making your registration and
             renewal hassle-free. Our mobile service brings the inspection
-            station to wherever you're at, saving you valuable time and effort.
+            station to wherever you're at, saving you valuable time.
           </p>
         </div>
       </section>

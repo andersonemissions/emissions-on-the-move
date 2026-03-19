@@ -43,9 +43,13 @@ const BookNow = () => {
         </div>
 
         <p className="subtitle" style={{ marginBottom: "1rem" }}>
-          {isExact
-            ? "Choose your exact appointment time."
-            : "Select a 2-hour window and we'll arrive within that time."}
+          {isExact ? (
+            <>
+              Choose your <strong>exact</strong> appointment time.
+            </>
+          ) : (
+            "Select a 2-hour window and we'll arrive within that time."
+          )}
         </p>
 
         {calComLink ? (

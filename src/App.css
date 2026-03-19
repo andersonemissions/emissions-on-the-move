@@ -19,9 +19,9 @@
   --spacing-xl: 4rem;
 
   /* Fonts */
-  --font-main: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  --font-main: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
-  --font-header: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-header: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
 
   /* Layout */
@@ -101,6 +101,17 @@ ul {
 
 .btn-outline:hover {
   background-color: var(--accent);
+}
+
+.btn-outline-white {
+  border: 2px solid var(--white);
+  color: var(--white);
+  background: transparent;
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
 }
 
 .full-width {
@@ -192,7 +203,7 @@ ul {
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.5)
     ),
-    url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1600&q=80")
+    url("./assets/emissions-on-the-move_car-img.PNG")
       center/cover;
   height: 600px;
   display: flex;
@@ -212,11 +223,27 @@ ul {
   color: var(--primary);
 }
 
-.hero-content p {
+.text-white {
+  color: var(--white);
+}
+
+.text-green {
+  color: var(--primary);
+}
+
+.hero-tagline {
   font-size: 1.75rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 400;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
   margin-bottom: var(--spacing-lg);
-  opacity: 0.95;
-  font-weight: 500;
+  font-weight: 400;
+  color: var(--white);
+  opacity: 0.85;
+  letter-spacing: 0.3px;
 }
 
 .hero-buttons {

@@ -25,6 +25,11 @@ const FAQItem = ({ question, answer }) => {
 const FAQ = () => {
   const faqs = [
     {
+      question: "Do you do registration and stickers as well?",
+      answer:
+        "Currently we are working with the state to get licensed to distribute tags, in the meantime after your passing emissions test we provide simple instructions to complete your registration and receive your tags in the mail.",
+    },
+    {
       question: "Where can I get my test done?",
       answer: "Anywhere in Utah County!",
     },
@@ -37,7 +42,7 @@ const FAQ = () => {
     {
       question: "What areas do you serve?",
       answer:
-        "Currently we're only serving for vehicles being registered in Utah county.",
+        "Currently we serve for vehicles being registered in Utah county.",
     },
     {
       question: "What happens if my car fails?",

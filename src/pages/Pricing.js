@@ -27,9 +27,6 @@ const Pricing = () => {
               <li>
                 <Check size={16} /> Instant results
               </li>
-              <li>
-                <Check size={16} /> Digital certificate
-              </li>
             </ul>
             <Link
               to="/book-now?type=exact"
@@ -55,9 +52,6 @@ const Pricing = () => {
               <li>
                 <Check size={16} /> Instant results
               </li>
-              <li>
-                <Check size={16} /> Digital certificate
-              </li>
             </ul>
             <Link
               to="/book-now?type=flexible"
@@ -81,8 +75,8 @@ const Pricing = () => {
           }}
         >
           <p style={{ margin: 0, fontSize: "1.1rem", color: "#007638" }}>
-            <strong>🚗 Multiple vehicles?</strong> Add additional vehicles at
-            $40 each!
+            <strong>🚗 Multiple cars?</strong> Add additional vehicles at $40
+            each!
           </p>
         </div>
       </div>
