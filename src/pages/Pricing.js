@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Check } from "lucide-react";
+import { Check, Car } from "lucide-react";
 
 const Pricing = () => {
   return (
-    <div className="page pricing-page">
+    <div className="page pricing-page page-fade-in">
       <div className="container">
         <h1>Our Pricing</h1>
         <p className="subtitle">
@@ -14,23 +14,31 @@ const Pricing = () => {
         <div className="pricing-cards">
           {/* Exact Time Option */}
           <div className="pricing-card">
-            <h3>Exact Time</h3>
-            <div className="price">$70</div>
-            <p className="price-desc">per vehicle</p>
-            <ul className="features-list">
+            <div className="pricing-header">
+              <h3>Exact Time</h3>
+              <div className="price-container">
+                <span className="price-num">$70</span>
+                <span className="price-period">/ vehicle</span>
+              </div>
+            </div>
+            <p style={{ color: "var(--text-light)", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
+              Perfect for busy days. Book a precise time slot, and we'll arrive on the dot.
+            </p>
+            <ul className="pricing-list">
               <li>
-                <Check size={16} /> Choose your exact appointment time
+                <Check size={18} className="check-icon" /> Choose your exact appointment hour
               </li>
               <li>
-                <Check size={16} /> On-site mobile inspection
+                <Check size={18} className="check-icon" /> Full mobile emission test
               </li>
               <li>
-                <Check size={16} /> Instant results
+                <Check size={18} className="check-icon" /> Instant digital test reports
               </li>
             </ul>
             <Link
               to="/book-now?type=exact"
-              className="btn btn-primary full-width"
+              className="btn btn-outline"
+              style={{ width: "100%" }}
             >
               Book Exact Time
             </Link>
@@ -38,24 +46,32 @@ const Pricing = () => {
 
           {/* Flexible Window Option */}
           <div className="pricing-card featured">
-            <div className="tag">Best Value</div>
-            <h3>Flexible Window</h3>
-            <div className="price">$60</div>
-            <p className="price-desc">per vehicle</p>
-            <ul className="features-list">
+            <div className="pricing-card-badge">Best Value</div>
+            <div className="pricing-header">
+              <h3>Flexible Window</h3>
+              <div className="price-container">
+                <span className="price-num">$60</span>
+                <span className="price-period">/ vehicle</span>
+              </div>
+            </div>
+            <p style={{ color: "var(--text-light)", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
+              Save money by choosing a flexible 2-hour arrival window that fits your day.
+            </p>
+            <ul class="pricing-list">
               <li>
-                <Check size={16} /> 2-hour arrival window
+                <Check size={18} className="check-icon" /> 2-hour technician arrival window
               </li>
               <li>
-                <Check size={16} /> On-site mobile inspection
+                <Check size={18} className="check-icon" /> Full mobile emission test
               </li>
               <li>
-                <Check size={16} /> Instant results
+                <Check size={18} className="check-icon" /> Instant digital test reports
               </li>
             </ul>
             <Link
               to="/book-now?type=flexible"
-              className="btn btn-primary full-width"
+              className="btn btn-primary"
+              style={{ width: "100%" }}
             >
               Book Flexible Window
             </Link>
@@ -63,21 +79,11 @@ const Pricing = () => {
         </div>
 
         {/* Additional Cars Note */}
-        <div
-          className="pricing-note"
-          style={{
-            marginTop: "2rem",
-            padding: "1.5rem",
-            backgroundColor: "#E6F5ED",
-            borderRadius: "12px",
-            textAlign: "center",
-            border: "1px solid #009F4D",
-          }}
-        >
-          <p style={{ margin: 0, fontSize: "1.1rem", color: "#007638" }}>
-            <strong>🚗 Multiple cars?</strong> Add additional vehicles at $40
-            each!
-          </p>
+        <div className="pricing-note">
+          <Car size={24} style={{ color: "var(--primary)", flexShrink: 0 }} />
+          <span>
+            <strong>🚗 Multiple cars?</strong> Add additional vehicles at <strong>$40 each</strong>!
+          </span>
         </div>
       </div>
     </div>

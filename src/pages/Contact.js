@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Mail, Phone, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_rqf7adh";
@@ -35,94 +35,124 @@ const Contact = () => {
   };
 
   return (
-    <div className="page contact-page">
-      <div className="container split-layout">
-        <div className="contact-info">
+    <div className="page contact-page page-fade-in">
+      <div className="container contact-layout">
+        <div className="contact-details">
           <h1>Get in Touch</h1>
-          <p>
+          <p style={{ color: "var(--text-light)", fontSize: "1.05rem", marginBottom: "2rem" }}>
             Have questions or need to schedule a special appointment? Reach out
             to us!
           </p>
 
-          <div className="contact-method">
-            <Phone className="icon" size={24} />
-            <div>
-              <h3>Phone</h3>
-              <p>(385) 392-6701</p>
+          <div className="contact-info-list">
+            <div className="contact-info-item">
+              <div className="contact-info-icon">
+                <Phone size={22} />
+              </div>
+              <div className="contact-info-text">
+                <h4>Call or Text</h4>
+                <p>(385) 392-6701</p>
+              </div>
             </div>
-          </div>
 
-          <div className="contact-method">
-            <Mail className="icon" size={24} />
-            <div>
-              <h3>Email</h3>
-              <p>andersonemissions@gmail.com</p>
+            <div className="contact-info-item">
+              <div className="contact-info-icon">
+                <Mail size={22} />
+              </div>
+              <div className="contact-info-text">
+                <h4>Email</h4>
+                <p>andersonemissions@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="contact-info-item">
+              <div className="contact-info-icon">
+                <MapPin size={22} />
+              </div>
+              <div className="contact-info-text">
+                <h4>Coverage Area</h4>
+                <p>All vehicles registered within Utah County</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="btn btn-primary"
-            disabled={status === "sending"}
-          >
-            {status === "sending" ? "Sending…" : "Send Message"}
-            {status !== "sending" && (
-              <Send size={16} style={{ marginLeft: "8px" }} />
-            )}
-          </button>
-
-          {status === "success" && (
-            <p
-              style={{
-                marginTop: "1rem",
-                color: "var(--primary)",
-                fontWeight: 600,
-              }}
+        <div className="contact-form-card">
+          <form ref={formRef} onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-input"
+                id="name"
+                name="name"
+                placeholder=" "
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <label className="form-label" htmlFor="name">Your Name</label>
+            </div>
+            
+            <div className="form-group">
+              <input
+                type="email"
+                className="form-input"
+                id="email"
+                name="email"
+                placeholder=" "
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <label className="form-label" htmlFor="email">Email Address</label>
+            </div>
+            
+            <div className="form-group">
+              <textarea
+                className="form-input"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder=" "
+                value={formData.message}
+                onChange={handleChange}
+                required
+                style={{ resize: "vertical", minHeight: "120px" }}
+              ></textarea>
+              <label className="form-label" htmlFor="message">Your Message</label>
+            </div>
+            
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={status === "sending"}
+              style={{ width: "100%" }}
             >
-              ✅ Message sent! We'll get back to you soon.
-            </p>
-          )}
-          {status === "error" && (
-            <p style={{ marginTop: "1rem", color: "red", fontWeight: 600 }}>
-              ❌ Something went wrong. Please try again or email us directly.
-            </p>
-          )}
-        </form>
+              {status === "sending" ? "Sending…" : "Send Message"}
+              {status !== "sending" && (
+                <Send size={16} style={{ marginLeft: "8px" }} />
+              )}
+            </button>
+
+            {status === "success" && (
+              <p
+                style={{
+                  marginTop: "1.5rem",
+                  color: "var(--primary)",
+                  fontWeight: 600,
+                  textAlign: "center",
+                }}
+              >
+                ✅ Message sent! We'll get back to you soon.
+              </p>
+            )}
+            {status === "error" && (
+              <p style={{ marginTop: "1.5rem", color: "red", fontWeight: 600, textAlign: "center" }}>
+                ❌ Something went wrong. Please try again or email us directly.
+              </p>
+            )}
+          </form>
+        </div>
       </div>
     </div>
   );

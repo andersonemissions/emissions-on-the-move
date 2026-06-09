@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Preview - Emissions on the Move</title>
+    
+    <!-- Google Fonts: Montserrat (Headings) and Outfit (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      :root {
+        /* Proposed Colors */
+        --primary: #00B356;
+        --primary-hover: #009949;
+        --accent: #10B981;
+        --bg-mint: #F0FDF4;
+        --dark: #0F172A;
+        --dark-footer: #082F1A;
+        --light: #F8FAFC;
+        --white: #ffffff;
+        --text-main: #334155;
+        --text-light: #64748B;
+        --light-mint: #F3FAF6;
+
+        /* Transitions */
+        --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        --transition-fast: all 0.2s ease;
+        
+        /* Shadows */
+        --shadow-subtle: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+        --shadow-md: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.08);
+        --shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+        --shadow-primary: 0 20px 25px -5px rgba(0, 179, 86, 0.15), 0 8px 10px -6px rgba(0, 179, 86, 0.1);
+
+        /* Radius */
+        --radius: 16px;
+      }
+
+      /* Base Styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: var(--light);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: var(--dark);
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+
+      p {
+        text-wrap: pretty;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition-fast);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Preview Banner */
+      .preview-banner {
+        background-color: var(--dark);
+        color: var(--white);
+        padding: 0.75rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10000;
+        font-size: 0.9rem;
+        border-bottom: 2px solid var(--primary);
+      }
+
+      .preview-title {
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .preview-badge {
+        background-color: var(--primary);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .preview-nav {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .preview-nav a {
+        color: var(--text-light);
+        font-weight: 500;
+      }
+
+      .preview-nav a:hover, .preview-nav a.active {
+        color: var(--white);
+      }
+
+      /* Mockup Navbar */
+      .mock-navbar {
+        height: 80px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+        position: sticky;
+        top: 40px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        transition: var(--transition-smooth);
+      }
+
+      .navbar-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-icon {
+        height: 48px;
+        width: auto;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .nav-item {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 500;
+        color: var(--text-main);
+        position: relative;
+        padding: 0.5rem 0;
+      }
+
+      .nav-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary);
+        transition: var(--transition-fast);
+      }
+
+      .nav-item:hover::after, .nav-item.active::after {
+        width: 100%;
+      }
+
+      .nav-item:hover, .nav-item.active {
+        color: var(--primary);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.75rem;
+        border-radius: var(--radius);
+        font-weight: 600;
+        font-family: 'Outfit', sans-serif;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        border: none;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: var(--white);
+        box-shadow: 0 4px 14px rgba(0, 179, 86, 0.3);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 179, 86, 0.4);
+      }
+
+      .btn-outline {
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        background: transparent;
+      }
+
+      .btn-outline:hover {
+        background-color: var(--primary);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .btn-outline-white {
+        border: 2px solid var(--white);
+        color: var(--white);
+        background: transparent;
+      }
+
+      .btn-outline-white:hover {
+        background-color: var(--white);
+        color: var(--dark);
+        transform: translateY(-2px);
+      }
+
+      /* Section Divider Title */
+      .section-divider {
+        background-color: #ECEFF1;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.85rem;
+        color: var(--text-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .section-divider::before, .section-divider::after {
+        content: '';
+        flex-grow: 1;
+        height: 1px;
+        background-color: var(--text-light);
+        opacity: 0.3;
+      }
+
+      /* HERO SECTION A: Gradient Mask */
+      .hero-a {
+        background: linear-gradient(
+            to right,
+            rgba(15, 23, 42, 0.95) 0%,
+            rgba(15, 23, 42, 0.8) 40%,
+            rgba(15, 23, 42, 0.25) 75%,
+            rgba(15, 23, 42, 0) 100%
+          ),
+          url("./eotm_with_car_and_employees.jpeg") center/cover;
+        background-position: center 58%;
+        height: 620px;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+        position: relative;
+      }
+
+      .hero-a-content {
+        max-width: 650px;
+        padding-left: 2rem;
+        animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .hero-a-content h1 {
+        font-size: 4.2rem;
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        font-weight: 900;
+      }
+
+      .hero-a-content h1 span {
+        color: var(--primary);
+      }
+
+      .hero-subtitle {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      /* HERO SECTION B: Glassmorphic Container */
+      .hero-b {
+        background: url("./eotm_with_car_and_employees.jpeg") center/cover;
+        background-position: center 58%;
+        height: 620px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-b-glass {
+        background: rgba(15, 23, 42, 0.55);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 24px;
+        padding: 3.5rem;
+        max-width: 580px;
+        margin-left: 2rem;
+        color: var(--white);
+        box-shadow: var(--shadow-lg);
+        animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .hero-b-glass h1 {
+        font-size: 3.5rem;
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        font-weight: 900;
+      }
+
+      .hero-b-glass h1 span {
+        color: var(--primary);
+      }
+
+      /* Features Section */
+      .section-padding {
+        padding: 6rem 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-header p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+      }
+
+      .feature-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 3rem 2.5rem;
+        text-align: center;
+        box-shadow: var(--shadow-subtle);
+        border: 1px solid rgba(15, 23, 42, 0.04);
+        transition: var(--transition-smooth);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        opacity: 0;
+        transition: var(--transition-fast);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-primary);
+        border-color: rgba(0, 179, 86, 0.1);
+      }
+
+      .feature-card:hover::before {
+        opacity: 1;
+      }
+
+      .feature-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background-color: var(--bg-mint);
+        color: var(--primary);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        transition: var(--transition-smooth);
+      }
+
+      .feature-card:hover .feature-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+        background-color: var(--primary);
+        color: var(--white);
+      }
+
+      .feature-card h3 {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      /* Pricing Section */
+      .pricing-grid {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .pricing-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 3.5rem 2.5rem 3rem;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: var(--shadow-subtle);
+        border: 1px solid rgba(15, 23, 42, 0.04);
+        position: relative;
+        transition: var(--transition-smooth);
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .pricing-card.featured {
+        border: 2px solid var(--primary);
+        transform: scale(1.03);
+        box-shadow: var(--shadow-md);
+      }
+
+      .pricing-card.featured:hover {
+        transform: scale(1.03) translateY(-8px);
+        box-shadow: var(--shadow-primary);
+      }
+
+      .pricing-card-badge {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: var(--white);
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        box-shadow: 0 4px 10px rgba(0, 179, 86, 0.2);
+      }
+
+      .pricing-card-badge::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: var(--primary);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        animation: pulse 2s infinite;
+        opacity: 0;
+      }
+
+      .pricing-header h3 {
+        font-size: 1.5rem;
+        color: var(--dark);
+        margin-bottom: 1rem;
+      }
+
+      .price-container {
+        margin-bottom: 1.5rem;
+      }
+
+      .price-num {
+        font-size: 3.5rem;
+        font-weight: 800;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--primary);
+        line-height: 1;
+      }
+
+      .price-period {
+        color: var(--text-light);
+        font-size: 1rem;
+      }
+
+      .pricing-list {
+        list-style: none;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .pricing-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--text-main);
+      }
+
+      .check-icon {
+        color: var(--primary);
+        flex-shrink: 0;
+      }
+
+      .pricing-note {
+        margin-top: 3rem;
+        background-color: var(--bg-mint);
+        border: 1px solid rgba(0, 179, 86, 0.15);
+        border-radius: var(--radius);
+        padding: 1.5rem 2rem;
+        text-align: center;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        color: var(--dark-footer);
+        font-weight: 500;
+        transition: var(--transition-smooth);
+      }
+
+      .pricing-note:hover {
+        border-color: var(--primary);
+        box-shadow: 0 4px 12px rgba(0, 179, 86, 0.05);
+      }
+
+      /* FAQ Accordion Section */
+      .faq-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .faq-card {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-subtle);
+        border: 1px solid rgba(15, 23, 42, 0.04);
+        overflow: hidden;
+        transition: var(--transition-smooth);
+      }
+
+      .faq-card:hover {
+        border-color: rgba(0, 179, 86, 0.15);
+      }
+
+      .faq-card.open {
+        border-color: var(--primary);
+        box-shadow: var(--shadow-md);
+      }
+
+      .faq-trigger {
+        padding: 1.75rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--dark);
+        transition: var(--transition-fast);
+      }
+
+      .faq-card.open .faq-question {
+        color: var(--primary);
+      }
+
+      .faq-icon {
+        color: var(--text-light);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color var(--transition-fast);
+      }
+
+      .faq-card.open .faq-icon {
+        transform: rotate(180deg);
+        color: var(--primary);
+      }
+
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .faq-body {
+        padding: 0 2rem 1.75rem;
+        color: var(--text-main);
+        font-size: 0.975rem;
+        border-top: 1px solid rgba(15, 23, 42, 0.02);
+      }
+
+      /* Contact Form Section */
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .contact-details h3 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-info-list {
+        margin: 2.5rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .contact-info-item {
+        display: flex;
+        gap: 1.25rem;
+        align-items: flex-start;
+      }
+
+      .contact-info-icon {
+        width: 50px;
+        height: 50px;
+        background-color: var(--bg-mint);
+        color: var(--primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .contact-info-text h4 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-info-text p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .contact-form-card {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        padding: 3.5rem;
+        box-shadow: var(--shadow-md);
+        border: 1px solid rgba(15, 23, 42, 0.04);
+      }
+
+      .form-group {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        border: 1px solid #CBD5E1;
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1rem;
+        background-color: #F8FAFC;
+        transition: var(--transition-fast);
+        color: var(--dark);
+      }
+
+      .form-input:focus {
+        outline: none;
+        border-color: var(--primary);
+        background-color: var(--white);
+        box-shadow: 0 0 0 4px rgba(0, 179, 86, 0.15);
+      }
+
+      .form-label {
+        position: absolute;
+        left: 1.25rem;
+        top: 1rem;
+        color: var(--text-light);
+        pointer-events: none;
+        transition: var(--transition-fast);
+        background-color: transparent;
+        padding: 0 0.25rem;
+      }
+
+      /* Animated Label */
+      .form-input:focus ~ .form-label,
+      .form-input:not(:placeholder-shown) ~ .form-label {
+        top: -0.6rem;
+        left: 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--primary);
+        background-color: var(--white);
+      }
+
+      /* Accessible Footer */
+      .footer {
+        background-color: var(--dark-footer);
+        color: #F1F5F9; /* High-contrast light gray */
+        padding: 5rem 0 2rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      .footer-brand h3 {
+        color: var(--white);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-brand p {
+        color: #94A3B8; /* Slate-400 */
+        font-size: 0.95rem;
+        max-width: 320px;
+      }
+
+      .footer-col h4 {
+        color: var(--primary);
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .footer-links a {
+        color: #CBD5E1; /* Slate-300 */
+        font-size: 0.95rem;
+        display: inline-block;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary);
+        transform: translateX(4px);
+      }
+
+      .footer-contact-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: #CBD5E1;
+        font-size: 0.95rem;
+      }
+
+      .footer-contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .footer-contact-list a:hover {
+        color: var(--primary);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 2rem;
+        text-align: center;
+        color: #64748B;
+        font-size: 0.85rem;
+      }
+
+      /* Floating Text Us Badge */
+      .floating-text-btn {
+        position: fixed;
+        bottom: 2.5rem;
+        right: 2.5rem;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: var(--white);
+        padding: 1rem 1.75rem;
+        border-radius: 50px;
+        box-shadow: 0 8px 25px rgba(0, 179, 86, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 600;
+        z-index: 9999;
+        transition: var(--transition-smooth);
+      }
+
+      .floating-text-btn:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(0, 179, 86, 0.45);
+      }
+
+      .pulsing-ring {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background: var(--primary);
+        top: 0;
+        left: 0;
+        z-index: -1;
+        animation: pulse 2s infinite;
+        opacity: 0;
+      }
+
+      /* Keyframes */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1.25);
+          opacity: 0;
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 968px) {
+        .mock-navbar {
+          top: 0; /* Align to top on smaller screens */
+          height: 70px;
+        }
+        .preview-banner {
+          display: none; /* Hide design preview banner on mobile to save vertical space */
+        }
+        .hero-a {
+          background: linear-gradient(
+              to bottom,
+              rgba(15, 23, 42, 0.6) 0%,
+              rgba(15, 23, 42, 0.35) 50%,
+              rgba(15, 23, 42, 0.6) 100%
+            ),
+            url("./eotm_with_car_and_employees.jpeg") center/cover;
+          justify-content: center;
+          text-align: center;
+          height: auto;
+          padding: 6rem 0;
+        }
+        .hero-a-content {
+          padding: 0 1rem;
+          margin: 0 auto;
+        }
+        .hero-a-content h1 {
+          font-size: 3rem;
+        }
+        .hero-b {
+          justify-content: center;
+          text-align: center;
+          height: auto;
+          padding: 6rem 0;
+        }
+        .hero-b-glass {
+          margin: 0 1rem;
+          padding: 2.5rem 1.5rem;
+        }
+        .hero-b-glass h1 {
+          font-size: 2.8rem;
+        }
+        .contact-layout {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-menu {
+          gap: 1rem;
+        }
+        /* Hide text-only nav items to prevent wrapping; keep only the CTA button */
+        .nav-menu a:not(.btn) {
+          display: none;
+        }
+        .mock-navbar .btn {
+          padding: 0.5rem 1rem;
+          font-size: 0.85rem;
+        }
+        .section-padding {
+          padding: 4rem 0;
+        }
+        .section-header h2 {
+          font-size: 2rem;
+        }
+        .hero-a-content h1 {
+          font-size: 2.5rem;
+          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .hero-b-glass h1 {
+          font-size: 2.4rem;
+        }
+        .hero-subtitle {
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+          text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+        }
+        .hero-buttons {
+          flex-direction: column;
+          gap: 0.75rem;
+          width: 100%;
+          align-items: center;
+        }
+        .hero-buttons .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+        .pricing-card.featured {
+          transform: none !important; /* Prevent vertical card scaling overlay bugs on mobile stack */
+        }
+        .pricing-card.featured:hover {
+          transform: translateY(-8px) !important;
+        }
+        .pricing-note {
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 1.25rem;
+          font-size: 0.95rem;
+        }
+        .faq-trigger {
+          padding: 1.25rem 1.5rem;
+        }
+        .faq-question {
+          font-size: 1rem;
+        }
+        .faq-body {
+          padding: 0 1.5rem 1.25rem;
+        }
+        .contact-form-card {
+          padding: 2rem 1.5rem;
+        }
+        .floating-text-btn {
+          bottom: 1.5rem;
+          right: 1.5rem;
+          padding: 0.75rem 1.25rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 1.25rem;
+        }
+        .hero-a-content h1, .hero-b-glass h1 {
+          font-size: 2rem;
+        }
+        .section-header h2 {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preview Header Banner -->
+    <div class="preview-banner">
+      <div class="preview-title">
+        <span class="preview-badge">Design Preview</span>
+        <span>Aesthetic & Typography Improvements Mockup</span>
+      </div>
+      <div class="preview-nav">
+        <a href="#hero-a-sect" class="active">Hero Option A</a>
+        <a href="#hero-b-sect">Hero Option B</a>
+        <a href="#features-sect">Features</a>
+        <a href="#pricing-sect">Pricing</a>
+        <a href="#faq-sect">FAQ Accordion</a>
+        <a href="#contact-sect">Contact Form</a>
+        <a href="#footer-sect">Footer</a>
+      </div>
+    </div>
+
+    <!-- Mock Navbar -->
+    <nav class="mock-navbar">
+      <div class="container navbar-container">
+        <a href="#">
+          <img src="./logo.png" alt="Emissions on the Move Logo" class="logo-icon" />
+        </a>
+        <div class="nav-menu">
+          <a href="#" class="nav-item active">Home</a>
+          <a href="#pricing-sect" class="nav-item">Pricing</a>
+          <a href="#faq-sect" class="nav-item">FAQ</a>
+          <a href="#contact-sect" class="nav-item">Contact</a>
+          <a href="#" class="btn btn-primary">Book Now <i data-lucide="calendar"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider" id="hero-a-sect">Option A: Gradient overlay mask hero (Clear image on right)</div>
+
+    <!-- HERO SECTION OPTION A -->
+    <section class="hero-a">
+      <div class="container" style="width: 100%;">
+        <div class="hero-a-content">
+          <h1>Coming <br /><span>June 2026!</span></h1>
+          <p class="hero-subtitle">Convenient, reliable mobile emissions testing. Serving all of Utah County!</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Book Appointment <i data-lucide="arrow-right"></i></a>
+            <a href="#pricing-sect" class="btn btn-outline-white">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER -->
+    <div class="section-divider" id="hero-b-sect">Option B: Glassmorphic Overlay Hero Card</div>
+
+    <!-- HERO SECTION OPTION B -->
+    <section class="hero-b">
+      <div class="container" style="width: 100%;">
+        <div class="hero-b-glass">
+          <h1>Coming <br /><span>June 2026!</span></h1>
+          <p class="hero-subtitle" style="color: rgba(255,255,255,0.85);">Convenient, reliable mobile emissions testing. Serving all of Utah County!</p>
+          <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">Book Appointment <i data-lucide="arrow-right"></i></a>
+            <a href="#pricing-sect" class="btn btn-outline-white">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="section-padding" id="features-sect">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Us?</h2>
+          <p>We take the hassle out of emissions testing by bringing the certified inspection station directly to your location.</p>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="clock" size="32"></i>
+            </div>
+            <h3>Save Valuable Time</h3>
+            <p>Skip the long, tedious station lines. Schedule an exact appointment slot or a window that works, and continue your day while we do the work.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="map-pin" size="32"></i>
+            </div>
+            <h3>We Come To You</h3>
+            <p>At home, at the office, or at the gym—we service your vehicle wherever you are in Utah County. Mobile inspection at your absolute convenience.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i data-lucide="award" size="32"></i>
+            </div>
+            <h3>Certified Service</h3>
+            <p>Our expert technicians are fully certified and licensed, guaranteeing top-quality inspections and immediate digital results for your vehicle registration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="section-padding" id="pricing-sect" style="background-color: #F1F5F9;">
+      <div class="container">
+        <div class="section-header">
+          <h2>Transparent Pricing</h2>
+          <p>No hidden fees or surprise surcharges. Choose the model that fits your schedule.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Card 1 -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Exact Time</h3>
+              <div class="price-container">
+                <span class="price-num">$70</span>
+                <span class="price-period">/ vehicle</span>
+              </div>
+            </div>
+            <p style="color: var(--text-light); font-size: 0.95rem;">Perfect for busy days. Book a precise time slot, and we'll arrive on the dot.</p>
+            <ul class="pricing-list">
+              <li><i data-lucide="check" class="check-icon" size="18"></i> Choose exact appointment hour</li>
+              <li><i data-lucide="check" class="check-icon" size="18"></i> Full mobile emission test</li>
+              <li><i data-lucide="check" class="check-icon" size="18"></i> Instant digital test reports</li>
+            </ul>
+            <a href="#" class="btn btn-outline" style="width: 100%;">Book Exact Time</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pricing-card featured">
+            <div class="pricing-card-badge">Best Value</div>
+            <div class="pricing-header">
+              <h3>Flexible Window</h3>
+              <div class="price-container">
+                <span class="price-num">$60</span>
+                <span class="price-period">/ vehicle</span>
+              </div>
+            </div>
+            <p style="color: var(--text-light); font-size: 0.95rem;">Save money by choosing a flexible 2-hour arrival window that fits your day.</p>
+            <ul class="pricing-list">
+              <li><i data-lucide="check" class="check-icon" size="18"></i> 2-hour technician arrival window</li>
+              <li><i data-lucide="check" class="check-icon" size="18"></i> Full mobile emission test</li>
+              <li><i data-lucide="check" class="check-icon" size="18"></i> Instant digital test reports</li>
+            </ul>
+            <a href="#" class="btn btn-primary" style="width: 100%;">Book Flexible Window</a>
+          </div>
+        </div>
+
+        <div class="pricing-note">
+          <i data-lucide="car" size="24" style="color: var(--primary);"></i>
+          <span><strong>Multiple cars at one location?</strong> Add additional vehicles to either booking for only <strong>$40 each</strong>!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-padding" id="faq-sect">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Got questions about how mobile emissions testing works? We've got answers.</p>
+        </div>
+
+        <div class="faq-wrapper">
+          <!-- FAQ Item 1 -->
+          <div class="faq-card">
+            <div class="faq-trigger">
+              <span class="faq-question">Do you do registration stickers on the spot?</span>
+              <i data-lucide="chevron-down" class="faq-icon" size="20"></i>
+            </div>
+            <div class="faq-content">
+              <div class="faq-body">
+                We are currently working with the State of Utah to obtain licensing to distribute physical registration stickers on-site. In the meantime, immediately after passing your mobile test, we provide simple, instant digital instructions to complete your registration online so your tags arrive directly in your mail.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-card">
+            <div class="faq-trigger">
+              <span class="faq-question">Do I need to sit and wait with my car during the test?</span>
+              <i data-lucide="chevron-down" class="faq-icon" size="20"></i>
+            </div>
+            <div class="faq-content">
+              <div class="faq-body">
+                Not at all! You do not need to be present or wait outside. Simply hand us the keys or let us know where they are, and you can stay comfortable inside your home or office. The inspection takes 15 minutes or less, and we'll bring your keys right back along with your printed report.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-card">
+            <div class="faq-trigger">
+              <span class="faq-question">What happens if my vehicle fails the emissions inspection?</span>
+              <i data-lucide="chevron-down" class="faq-icon" size="20"></i>
+            </div>
+            <div class="faq-content">
+              <div class="faq-body">
+                If your car fails, our technician will print the diagnostic failure report, explain the trouble codes in plain terms, and suggest common repair paths. To make it completely stress-free, we provide one **complimentary retest within 60 days** once your repairs are complete.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-padding" id="contact-sect" style="background-color: #F1F5F9;">
+      <div class="container contact-layout">
+        <div class="contact-details">
+          <h3>Get In Touch</h3>
+          <p style="color: var(--text-light); font-size: 1.05rem;">Have special fleet requests, questions about our service zones, or scheduling needs? Reach out, and we'll respond promptly.</p>
+          
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="phone" size="22"></i></div>
+              <div class="contact-info-text">
+                <h4>Call or Text</h4>
+                <p>(385) 392-6701</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="mail" size="22"></i></div>
+              <div class="contact-info-text">
+                <h4>Email</h4>
+                <p>andersonemissions@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i data-lucide="map-pin" size="22"></i></div>
+              <div class="contact-info-text">
+                <h4>Coverage Area</h4>
+                <p>All vehicles registered within Utah County</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form-preview">
+            <div class="form-group">
+              <input type="text" class="form-input" id="name" placeholder=" " required />
+              <label class="form-label" for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" id="email" placeholder=" " required />
+              <label class="form-label" for="email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input" id="message" rows="4" placeholder=" " required style="resize: vertical; min-height: 120px;"></textarea>
+              <label class="form-label" for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i data-lucide="send"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESSIBLE FOOTER -->
+    <footer class="footer" id="footer-sect">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h3>Emissions on the Move</h3>
+          <p>Bringing convenient, certified mobile emissions testing directly to your location throughout Utah County.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero-a-sect">Home</a></li>
+            <li><a href="#pricing-sect">Pricing</a></li>
+            <li><a href="#faq-sect">FAQ</a></li>
+            <li><a href="#contact-sect">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul class="footer-contact-list">
+            <li><i data-lucide="phone" size="16" style="color: var(--primary);"></i> <span>(385) 392-6701</span></li>
+            <li><i data-lucide="mail" size="16" style="color: var(--primary);"></i> <a href="mailto:andersonemissions@gmail.com">andersonemissions@gmail.com</a></li>
+            <li><i data-lucide="instagram" size="16" style="color: var(--primary);"></i> <a href="#" target="_blank">@emissionsonthemove</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Emissions on the Move. All rights reserved. Designed for high accessibility and screen-reading compatibility.</p>
+      </div>
+    </footer>
+
+    <!-- Text Us Floating Button -->
+    <a href="sms:3853926701" class="floating-text-btn" aria-label="Text Us">
+      <div class="pulsing-ring"></div>
+      <i data-lucide="message-circle" size="20"></i>
+      <span>Text Us</span>
+    </a>
+
+    <!-- Interactive Scripts for the Mockup -->
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // FAQ Accordion Transition
+      document.querySelectorAll('.faq-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const card = trigger.parentElement;
+          const content = trigger.nextElementSibling;
+          const isOpen = card.classList.contains('open');
+          
+          // Close other FAQs if open
+          document.querySelectorAll('.faq-card').forEach(otherCard => {
+            if (otherCard !== card && otherCard.classList.contains('open')) {
+              otherCard.classList.remove('open');
+              otherCard.querySelector('.faq-content').style.maxHeight = 0;
+            }
+          });
+
+          // Toggle current FAQ
+          if (isOpen) {
+            card.classList.remove('open');
+            content.style.maxHeight = 0;
+          } else {
+            card.classList.add('open');
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Quick Banner Link Styling & Behavior
+      const bannerLinks = document.querySelectorAll('.preview-nav a');
+      bannerLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          bannerLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
+
+      // Form submission prevention for mockup
+      document.getElementById('contact-form-preview').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('🎉 Mock form submitted! Focus glowing transitions and floating label reset simulated.');
+        document.getElementById('contact-form-preview').reset();
+      });
+    </script>
+  </body>
+</html>

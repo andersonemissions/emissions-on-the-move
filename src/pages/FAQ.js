@@ -1,23 +1,30 @@
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import React, { useState, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
 
   return (
     <div
-      className={`faq-item ${isOpen ? "open" : ""}`}
+      className={`faq-card ${isOpen ? "open" : ""}`}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="faq-question">
-        <span>{question}</span>
-        {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+      <div className="faq-trigger">
+        <span className="faq-question">{question}</span>
+        <ChevronDown size={20} className="faq-icon" />
       </div>
-      {isOpen && (
-        <div className="faq-answer">
+      <div
+        className="faq-content"
+        ref={contentRef}
+        style={{
+          maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+        }}
+      >
+        <div className="faq-body">
           <p>{answer}</p>
         </div>
-      )}
+      </div>
     </div>
   );
 };
@@ -57,10 +64,10 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="page faq-page">
+    <div className="page faq-page page-fade-in">
       <div className="container">
         <h1>Frequently Asked Questions</h1>
-        <div className="faq-list">
+        <div className="faq-wrapper">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} />
           ))}

@@ -7,7 +7,8 @@ const TextUsButton = () => {
 
   return (
     <a href={`sms:${phoneNumber}`} className="text-us-btn" aria-label="Text Us">
-      <MessageCircle size={24} />
+      <div className="pulsing-ring"></div>
+      <MessageCircle size={20} />
       <span className="text-us-label">Text Us</span>
     </a>
   );

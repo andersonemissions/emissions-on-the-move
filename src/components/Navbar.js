@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Calendar } from "lucide-react";
 import "../App.css"; // Ensure we have access to styles
 import logo from "../assets/logo.png";
 
@@ -43,6 +43,7 @@ const Navbar = () => {
               } ${link.isButton ? "nav-button" : ""}`}
             >
               {link.name}
+              {link.isButton && <Calendar size={16} style={{ marginLeft: "6px" }} />}
             </Link>
           ))}
         </div>

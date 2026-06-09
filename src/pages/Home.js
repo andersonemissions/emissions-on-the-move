@@ -1,31 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle, Clock, MapPin } from "lucide-react";
+import { CheckCircle, Clock, MapPin, ArrowRight } from "lucide-react";
 
 const Home = () => {
   return (
-    <div className="page home-page">
+    <div className="page home-page page-fade-in">
       <section className="hero">
-        <div className="hero-content">
-          <h1>
-            <span className="text-white">Coming soon!</span>
-          </h1>
-          <h3 className="text-white hero-tagline">Check back shortly for our official opening!</h3>
-          <p className="hero-subtitle">Serving all of Utah county!</p>
-          <div className="hero-buttons">
-            <Link to="/book-now" className="btn btn-primary">
-              Book Now
-            </Link>
-            <Link to="/pricing" className="btn btn-outline-white">
-              View Pricing
-            </Link>
+        <div className="container" style={{ width: "100%" }}>
+          <div className="hero-content">
+            <h1>
+              Coming <br /><span className="text-green">June 2026!</span>
+            </h1>
+            <p className="hero-subtitle">
+              Convenient, reliable mobile emissions testing. Serving all of Utah County!
+            </p>
+            <div className="hero-buttons">
+              <Link to="/book-now" className="btn btn-primary">
+                Book Now <ArrowRight size={18} />
+              </Link>
+              <Link to="/pricing" className="btn btn-outline-white">
+                View Pricing
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="features">
+      <section className="features container">
         <div className="feature-card">
-          <Clock size={40} className="feature-icon" />
+          <div className="feature-icon-wrapper">
+            <Clock size={32} />
+          </div>
           <h3>Save Time</h3>
           <p>
             Skip the lines! Schedule a time that works best for you and we'll be
@@ -33,7 +38,9 @@ const Home = () => {
           </p>
         </div>
         <div className="feature-card">
-          <MapPin size={40} className="feature-icon" />
+          <div className="feature-icon-wrapper">
+            <MapPin size={32} />
+          </div>
           <h3>We Come to You</h3>
           <p>
             We'll service your car wherever you're at! Home, Work, Anywhere you
@@ -41,7 +48,9 @@ const Home = () => {
           </p>
         </div>
         <div className="feature-card">
-          <CheckCircle size={40} className="feature-icon" />
+          <div className="feature-icon-wrapper">
+            <CheckCircle size={32} />
+          </div>
           <h3>Certified Service</h3>
           <p>
             Licensed and certified technicians you can trust for all your
