@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ac1b74f.css",
-    "main.js": "/static/js/main.a278a9ad.js",
+    "main.css": "/static/css/main.74575efa.css",
+    "main.js": "/static/js/main.8b5fd909.js",
     "static/js/453.dfa657df.chunk.js": "/static/js/453.dfa657df.chunk.js",
-    "static/media/emissions-on-the-move_car-img.PNG": "/static/media/emissions-on-the-move_car-img.dcd759e7d4342c8e235c.PNG",
+    "static/media/eotm_with_car_and_employees.jpeg": "/static/media/eotm_with_car_and_employees.1f3fbb94e6b727e4be65.jpeg",
     "index.html": "/index.html",
-    "main.5ac1b74f.css.map": "/static/css/main.5ac1b74f.css.map",
-    "main.a278a9ad.js.map": "/static/js/main.a278a9ad.js.map",
+    "main.74575efa.css.map": "/static/css/main.74575efa.css.map",
+    "main.8b5fd909.js.map": "/static/js/main.8b5fd909.js.map",
     "453.dfa657df.chunk.js.map": "/static/js/453.dfa657df.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ac1b74f.css",
-    "static/js/main.a278a9ad.js"
+    "static/css/main.74575efa.css",
+    "static/js/main.8b5fd909.js"
   ]
 }
