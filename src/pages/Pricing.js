@@ -26,7 +26,7 @@ const Pricing = () => {
             </p>
             <ul className="pricing-list">
               <li>
-                <Check size={18} className="check-icon" /> Choose your exact appointment hour
+                <Check size={18} className="check-icon" /> Choose your exact appointment time
               </li>
               <li>
                 <Check size={18} className="check-icon" /> Full mobile emission test
