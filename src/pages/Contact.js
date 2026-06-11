@@ -71,7 +71,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-text">
                 <h4>Coverage Area</h4>
-                <p>All vehicles registered within Utah County</p>
+                <p>Testing anywhere in Utah county</p>
               </div>
             </div>
           </div>

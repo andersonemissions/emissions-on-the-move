@@ -49,12 +49,12 @@ const FAQ = () => {
     {
       question: "What areas do you serve?",
       answer:
-        "Currently we serve for vehicles being registered in Utah county.",
+        "We test for vehicles being registered anywhere in Utah! However we only perform tests within the boundaries of Utah County",
     },
     {
       question: "What happens if my car fails?",
       answer:
-        "We will print the failed report, explain it, and provide a list of potential solutions. We’ll also provide a complimentary retest within 60 days at no cost to you!",
+        "We will print the failed report, explain it, and provide a list of potential solutions. We’ll also provide a complimentary retest within 15 days at no cost to you!",
     },
     {
       question: "Do you offer fleet services?",

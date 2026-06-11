@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Check, Car } from "lucide-react";
+import { Check } from "lucide-react";
 
 const Pricing = () => {
   return (
@@ -78,11 +78,9 @@ const Pricing = () => {
           </div>
         </div>
 
-        {/* Additional Cars Note */}
         <div className="pricing-note">
-          <Car size={24} style={{ color: "var(--primary)", flexShrink: 0 }} />
           <span>
-            <strong>🚗 Multiple cars?</strong> Add additional vehicles at <strong>$40 each</strong>!
+            <strong>Multiple cars?</strong> Add additional vehicles at <strong>$40 each</strong>!
           </span>
         </div>
       </div>
