@@ -45,7 +45,11 @@ const Contact = () => {
           </p>
 
           <div className="contact-info-list">
-            <div className="contact-info-item">
+            <a
+              href="tel:3853926701"
+              className="contact-info-item"
+              style={{ textDecoration: "none" }}
+            >
               <div className="contact-info-icon">
                 <Phone size={22} />
               </div>
@@ -53,9 +57,13 @@ const Contact = () => {
                 <h4>Call or Text</h4>
                 <p>(385) 392-6701</p>
               </div>
-            </div>
+            </a>
 
-            <div className="contact-info-item">
+            <a
+              href="mailto:andersonemissions@gmail.com"
+              className="contact-info-item"
+              style={{ textDecoration: "none" }}
+            >
               <div className="contact-info-icon">
                 <Mail size={22} />
               </div>
@@ -63,7 +71,7 @@ const Contact = () => {
                 <h4>Email</h4>
                 <p>andersonemissions@gmail.com</p>
               </div>
-            </div>
+            </a>
 
             <div className="contact-info-item">
               <div className="contact-info-icon">
