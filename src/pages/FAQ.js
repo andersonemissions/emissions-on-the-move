@@ -65,6 +65,12 @@ const FAQ = () => {
 
   return (
     <div className="page faq-page page-fade-in">
+      <title>Emissions Testing FAQ | Emissions on the Move</title>
+      <meta
+        name="description"
+        content="Answers to common questions about mobile emissions testing in Utah County: service area, do you need to be present, what happens if your car fails, fleet services, and more."
+      />
+      <link rel="canonical" href="https://www.emissionsonthemove.com/faq" />
       <div className="container">
         <h1>Frequently Asked Questions</h1>
         <div className="faq-wrapper">

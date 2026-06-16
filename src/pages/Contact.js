@@ -36,6 +36,12 @@ const Contact = () => {
 
   return (
     <div className="page contact-page page-fade-in">
+      <title>Contact Us | Emissions on the Move</title>
+      <meta
+        name="description"
+        content="Contact Emissions on the Move for mobile emissions testing in Utah County. Call or text (385) 392-6701, email andersonemissions@gmail.com, or send us a message."
+      />
+      <link rel="canonical" href="https://www.emissionsonthemove.com/contact" />
       <div className="container contact-layout">
         <div className="contact-details">
           <h1>Get in Touch</h1>

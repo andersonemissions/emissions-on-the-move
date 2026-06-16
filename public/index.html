@@ -4,11 +4,29 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#16a34a" />
+
+    <!-- Primary SEO -->
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Skip the lines. Emissions on the Move brings certified mobile emissions testing to your home or work anywhere in Utah County. Book online or call (385) 392-6701."
     />
+    <link rel="canonical" href="https://www.emissionsonthemove.com/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Facebook, iMessage, LinkedIn previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Emissions on the Move" />
+    <meta property="og:title" content="Mobile Emissions Testing in Utah County | Emissions on the Move" />
+    <meta property="og:description" content="Certified mobile emissions testing that comes to your home or work anywhere in Utah County. We come to you!" />
+    <meta property="og:url" content="https://www.emissionsonthemove.com/" />
+    <meta property="og:image" content="https://www.emissionsonthemove.com/eotm_with_car_and_employees.jpeg" />
+
+    <!-- Twitter / X cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mobile Emissions Testing in Utah County | Emissions on the Move" />
+    <meta name="twitter:description" content="Certified mobile emissions testing that comes to your home or work anywhere in Utah County. We come to you!" />
+    <meta name="twitter:image" content="https://www.emissionsonthemove.com/eotm_with_car_and_employees.jpeg" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,7 +42,47 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Emissions on the Move</title>
+    <title>Mobile Emissions Testing in Utah County | Emissions on the Move</title>
+
+    <!-- Structured data: tells Google this is a local service-area business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "Emissions on the Move",
+        "description": "Mobile vehicle emissions testing serving all of Utah County, Utah. We come to your home or work.",
+        "url": "https://www.emissionsonthemove.com/",
+        "telephone": "+1-385-392-6701",
+        "email": "andersonemissions@gmail.com",
+        "image": "https://www.emissionsonthemove.com/eotm_with_car_and_employees.jpeg",
+        "logo": "https://www.emissionsonthemove.com/logo.png",
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Utah County, Utah"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "UT",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 40.2338,
+          "longitude": -111.6585
+        },
+        "sameAs": [
+          "https://instagram.com/emissionsonthemove",
+          "https://www.facebook.com/profile.php?id=61590274666347"
+        ],
+        "makesOffer": {
+          "@type": "Offer",
+          "name": "Mobile emissions test",
+          "priceCurrency": "USD",
+          "price": "60"
+        }
+      }
+    </script>
     <script>
       (function(l) {
         if (l.search[1] === '/') {
@@ -45,7 +103,15 @@
     />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <h1>Emissions on the Move &mdash; Mobile Emissions Testing in Utah County</h1>
+      <p>
+        Certified, convenient mobile emissions testing that comes to your home
+        or work anywhere in Utah County, Utah. Skip the lines &mdash; we come to
+        you! Call or text (385) 392-6701 to book your inspection.
+      </p>
+      <p>Please enable JavaScript to use the online booking app.</p>
+    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.

@@ -16,6 +16,12 @@ const BookNow = () => {
 
   return (
     <div className="page book-now-page">
+      <title>Book Mobile Emissions Testing in Utah County | Emissions on the Move</title>
+      <meta
+        name="description"
+        content="Book your mobile emissions test online. Choose an exact appointment time or a flexible 2-hour window and we'll come to you anywhere in Utah County."
+      />
+      <link rel="canonical" href="https://www.emissionsonthemove.com/book-now" />
       <div className="container">
         <h1>Book Your Inspection</h1>
 

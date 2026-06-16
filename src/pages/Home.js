@@ -5,6 +5,13 @@ import { CheckCircle, Clock, MapPin, ArrowRight } from "lucide-react";
 const Home = () => {
   return (
     <div className="page home-page page-fade-in">
+      <title>Mobile Emissions Testing in Utah County | Emissions on the Move</title>
+      <meta
+        name="description"
+        content="Skip the lines. Emissions on the Move brings certified mobile emissions testing to your home or work anywhere in Utah County. Book online or call (385) 392-6701."
+      />
+      <link rel="canonical" href="https://www.emissionsonthemove.com/" />
+
       <section className="hero">
         <div className="container" style={{ width: "100%" }}>
           <div className="hero-content">

@@ -5,6 +5,12 @@ import { Check } from "lucide-react";
 const Pricing = () => {
   return (
     <div className="page pricing-page page-fade-in">
+      <title>Emissions Testing Prices from $60 | Emissions on the Move</title>
+      <meta
+        name="description"
+        content="Affordable mobile emissions testing in Utah County. Flexible 2-hour window for $60, exact appointment time for $70, additional vehicles $40 each. No hidden fees."
+      />
+      <link rel="canonical" href="https://www.emissionsonthemove.com/pricing" />
       <div className="container">
         <h1>Our Pricing</h1>
         <p className="subtitle">
