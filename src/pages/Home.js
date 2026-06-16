@@ -9,7 +9,7 @@ const Home = () => {
         <div className="container" style={{ width: "100%" }}>
           <div className="hero-content">
             <h1>
-              Coming <br /><span className="text-green">June 2026!</span>
+              Emissions Due? <br /><span className="text-green">We Come To You!</span>
             </h1>
             <p className="hero-subtitle">
               Convenient, reliable mobile emissions testing. Serving all of Utah County!
