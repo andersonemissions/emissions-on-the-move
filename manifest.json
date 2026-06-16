@@ -1,6 +1,7 @@
 {
   "short_name": "Emissions on the Move",
   "name": "Emissions on the Move",
+  "description": "Mobile emissions testing that comes to you anywhere in Utah County.",
   "icons": [
     {
       "src": "favicon.ico",
