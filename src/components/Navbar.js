@@ -14,10 +14,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "FAQ", path: "/faq" },
-    { name: "Contact", path: "/contact" },
-    { name: "Book Now", path: "/book-now", isButton: true },
+    { name: "Pricing", path: "/pricing/" },
+    { name: "FAQ", path: "/faq/" },
+    { name: "Contact", path: "/contact/" },
+    { name: "Book Now", path: "/book-now/", isButton: true },
   ];
 
   return (
@@ -27,6 +27,8 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Emissions on the Move Logo"
+            width="146"
+            height="50"
             className="logo-icon"
             style={{ height: "50px", width: "auto" }}
           />
@@ -49,13 +51,20 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="mobile-menu-icon" onClick={toggleMenu}>
+        <button
+          type="button"
+          className="mobile-menu-icon"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+          onClick={toggleMenu}
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </div>
+        </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div className={`mobile-nav ${isOpen ? "active" : ""}`}>
+      <div id="mobile-navigation" className={`mobile-nav ${isOpen ? "active" : ""}`}>
         {navLinks.map((link) => (
           <Link
             key={link.name}

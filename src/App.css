@@ -236,6 +236,10 @@ ul {
   display: none;
   cursor: pointer;
   color: var(--dark);
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
 }
 
 .mobile-nav {
@@ -282,7 +286,10 @@ ul {
       rgba(15, 23, 42, 0.25) 75%,
       rgba(15, 23, 42, 0) 100%
     ),
-    url("./assets/eotm_with_car_and_employees.jpeg") center/cover;
+    image-set(
+      url("./assets/eotm_with_car_and_employees.webp") type("image/webp"),
+      url("./assets/eotm_with_car_and_employees.jpeg") type("image/jpeg")
+    ) center/cover;
   background-position: center 58%;
   height: 620px;
   display: flex;
@@ -489,7 +496,7 @@ ul {
   box-shadow: 0 4px 10px rgba(0, 179, 86, 0.2);
 }
 
-.pricing-header h3 {
+.pricing-header h2 {
   font-size: 1.5rem;
   color: var(--dark);
   margin-bottom: 1rem;
@@ -588,6 +595,13 @@ ul {
 }
 
 .faq-trigger {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
   padding: 1.75rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -681,7 +695,7 @@ ul {
   color: var(--white);
 }
 
-.contact-info-text h4 {
+.contact-info-text h2 {
   font-size: 1.1rem;
   font-family: var(--font-header);
   font-weight: 700;
@@ -781,13 +795,13 @@ ul {
   padding: 0 var(--spacing-md) var(--spacing-lg);
 }
 
-.footer h3 {
+.footer-section.brand h2 {
   color: var(--white);
   font-size: 1.5rem;
   margin-bottom: var(--spacing-md);
 }
 
-.footer h4 {
+.footer-section:not(.brand) > h3 {
   color: var(--primary);
   font-size: 1.1rem;
   margin-bottom: var(--spacing-md);
@@ -839,7 +853,10 @@ ul {
         rgba(15, 23, 42, 0.35) 50%,
         rgba(15, 23, 42, 0.6) 100%
       ),
-      url("./assets/eotm_with_car_and_employees.jpeg") center/cover;
+      image-set(
+        url("./assets/eotm_with_car_and_employees.webp") type("image/webp"),
+        url("./assets/eotm_with_car_and_employees.jpeg") type("image/jpeg")
+      ) center/cover;
     justify-content: center;
     text-align: center;
     height: auto;
@@ -859,6 +876,32 @@ ul {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

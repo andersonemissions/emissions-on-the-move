@@ -9,30 +9,30 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section brand">
-          <h3>Emissions on the Move</h3>
+          <h2>Emissions on the Move</h2>
           <p>Convenient, reliable mobile emissions testing. We come to you.</p>
         </div>
 
         <div className="footer-section links">
-          <h4>Quick Links</h4>
+          <h3>Quick Links</h3>
           <ul>
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/pricing">Pricing</Link>
+              <Link to="/pricing/">Pricing</Link>
             </li>
             <li>
-              <Link to="/faq">FAQ</Link>
+              <Link to="/faq/">FAQ</Link>
             </li>
             <li>
-              <Link to="/book-now">Book Now</Link>
+              <Link to="/book-now/">Book Now</Link>
             </li>
           </ul>
         </div>
 
         <div className="footer-section contact">
-          <h4>Contact Us</h4>
+          <h3>Contact Us</h3>
           <ul>
             <li>
               <a
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {currentYear} Emissions on the Move. All rights reserved.</p>
+        <p>{`© ${currentYear} Emissions on the Move. All rights reserved.`}</p>
       </div>
     </footer>
   );

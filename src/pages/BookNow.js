@@ -1,5 +1,6 @@
 import React from "react";
 import { useSearchParams, Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const BookNow = () => {
   const [searchParams] = useSearchParams();
@@ -16,12 +17,7 @@ const BookNow = () => {
 
   return (
     <div className="page book-now-page">
-      <title>Book Mobile Emissions Testing in Utah County | Emissions on the Move</title>
-      <meta
-        name="description"
-        content="Book your mobile emissions test online. Choose an exact appointment time or a flexible 2-hour window and we'll come to you anywhere in Utah County."
-      />
-      <link rel="canonical" href="https://www.emissionsonthemove.com/book-now" />
+      <SEO path="/book-now/" />
       <div className="container">
         <h1>Book Your Inspection</h1>
 
@@ -35,13 +31,13 @@ const BookNow = () => {
           }}
         >
           <Link
-            to="/book-now?type=exact"
+            to="/book-now/?type=exact"
             className={`btn ${isExact ? "btn-primary" : "btn-outline"}`}
           >
             Exact Time ($70)
           </Link>
           <Link
-            to="/book-now?type=flexible"
+            to="/book-now/?type=flexible"
             className={`btn ${!isExact ? "btn-primary" : "btn-outline"}`}
           >
             Flexible Window ($60)
@@ -91,9 +87,9 @@ const BookNow = () => {
               marginTop: "1rem",
             }}
           >
-            <h3 style={{ marginBottom: "1rem", color: "#334155" }}>
+            <h2 style={{ marginBottom: "1rem", color: "#334155" }}>
               📅 Online Booking Coming Soon!
-            </h3>
+            </h2>
             <p style={{ color: "#64748b", marginBottom: "1.5rem" }}>
               We're setting up our online scheduling system.
               <br />

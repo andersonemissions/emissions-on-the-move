@@ -14,17 +14,17 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ScrollToTop />
       <div className="App">
         <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/book-now" element={<BookNow />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/faq/" element={<FAQ />} />
+            <Route path="/book-now/" element={<BookNow />} />
+            <Route path="/pricing/" element={<Pricing />} />
+            <Route path="/contact/" element={<Contact />} />
           </Routes>
         </main>
         <TextUsButton />

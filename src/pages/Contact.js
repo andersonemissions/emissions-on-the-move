@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import SEO from "../components/SEO";
 
 const SERVICE_ID = "service_rqf7adh";
 const TEMPLATE_ID = "template_z3b0fuc";
@@ -36,12 +37,7 @@ const Contact = () => {
 
   return (
     <div className="page contact-page page-fade-in">
-      <title>Contact Us | Emissions on the Move</title>
-      <meta
-        name="description"
-        content="Contact Emissions on the Move for mobile emissions testing in Utah County. Call or text (385) 392-6701, email andersonemissions@gmail.com, or send us a message."
-      />
-      <link rel="canonical" href="https://www.emissionsonthemove.com/contact" />
+      <SEO path="/contact/" />
       <div className="container contact-layout">
         <div className="contact-details">
           <h1>Get in Touch</h1>
@@ -60,7 +56,7 @@ const Contact = () => {
                 <Phone size={22} />
               </div>
               <div className="contact-info-text">
-                <h4>Call or Text</h4>
+                <h2>Call or Text</h2>
                 <p>(385) 392-6701</p>
               </div>
             </a>
@@ -74,7 +70,7 @@ const Contact = () => {
                 <Mail size={22} />
               </div>
               <div className="contact-info-text">
-                <h4>Email</h4>
+                <h2>Email</h2>
                 <p>andersonemissions@gmail.com</p>
               </div>
             </a>
@@ -84,7 +80,7 @@ const Contact = () => {
                 <MapPin size={22} />
               </div>
               <div className="contact-info-text">
-                <h4>Coverage Area</h4>
+                <h2>Coverage Area</h2>
                 <p>Testing anywhere in Utah county</p>
               </div>
             </div>
@@ -148,6 +144,7 @@ const Contact = () => {
               )}
             </button>
 
+            <div aria-live="polite" aria-atomic="true">
             {status === "success" && (
               <p
                 style={{
@@ -165,6 +162,7 @@ const Contact = () => {
                 ❌ Something went wrong. Please try again or email us directly.
               </p>
             )}
+            </div>
           </form>
         </div>
       </div>

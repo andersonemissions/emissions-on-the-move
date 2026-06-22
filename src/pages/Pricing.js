@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
+import SEO from "../components/SEO";
 
 const Pricing = () => {
   return (
     <div className="page pricing-page page-fade-in">
-      <title>Emissions Testing Prices from $60 | Emissions on the Move</title>
-      <meta
-        name="description"
-        content="Affordable mobile emissions testing in Utah County. Flexible 2-hour window for $60, exact appointment time for $70, additional vehicles $40 each. No hidden fees."
-      />
-      <link rel="canonical" href="https://www.emissionsonthemove.com/pricing" />
+      <SEO path="/pricing/" />
       <div className="container">
         <h1>Our Pricing</h1>
         <p className="subtitle">
@@ -21,7 +17,7 @@ const Pricing = () => {
           {/* Exact Time Option */}
           <div className="pricing-card">
             <div className="pricing-header">
-              <h3>Exact Time</h3>
+              <h2>Exact Time</h2>
               <div className="price-container">
                 <span className="price-num">$70</span>
                 <span className="price-period">/ vehicle</span>
@@ -42,7 +38,7 @@ const Pricing = () => {
               </li>
             </ul>
             <Link
-              to="/book-now?type=exact"
+              to="/book-now/?type=exact"
               className="btn btn-outline"
               style={{ width: "100%" }}
             >
@@ -54,7 +50,7 @@ const Pricing = () => {
           <div className="pricing-card featured">
             <div className="pricing-card-badge">Best Value</div>
             <div className="pricing-header">
-              <h3>Flexible Window</h3>
+              <h2>Flexible Window</h2>
               <div className="price-container">
                 <span className="price-num">$60</span>
                 <span className="price-period">/ vehicle</span>
@@ -63,7 +59,7 @@ const Pricing = () => {
             <p style={{ color: "var(--text-light)", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
               Save money by choosing a flexible 2-hour arrival window that fits your day.
             </p>
-            <ul class="pricing-list">
+            <ul className="pricing-list">
               <li>
                 <Check size={18} className="check-icon" /> 2-hour technician arrival window
               </li>
@@ -75,7 +71,7 @@ const Pricing = () => {
               </li>
             </ul>
             <Link
-              to="/book-now?type=flexible"
+              to="/book-now/?type=flexible"
               className="btn btn-primary"
               style={{ width: "100%" }}
             >

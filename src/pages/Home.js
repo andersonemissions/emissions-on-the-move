@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, Clock, MapPin, ArrowRight } from "lucide-react";
+import SEO from "../components/SEO";
 
 const Home = () => {
   return (
     <div className="page home-page page-fade-in">
-      <title>Mobile Emissions Testing in Utah County | Emissions on the Move</title>
-      <meta
-        name="description"
-        content="Skip the lines. Emissions on the Move brings certified mobile emissions testing to your home or work anywhere in Utah County. Book online or call (385) 392-6701."
-      />
-      <link rel="canonical" href="https://www.emissionsonthemove.com/" />
+      <SEO path="/" />
 
       <section className="hero">
         <div className="container" style={{ width: "100%" }}>
@@ -22,10 +18,10 @@ const Home = () => {
               Convenient, reliable mobile emissions testing. Serving all of Utah County!
             </p>
             <div className="hero-buttons">
-              <Link to="/book-now" className="btn btn-primary">
+              <Link to="/book-now/" className="btn btn-primary">
                 Book Now <ArrowRight size={18} />
               </Link>
-              <Link to="/pricing" className="btn btn-outline-white">
+              <Link to="/pricing/" className="btn btn-outline-white">
                 View Pricing
               </Link>
             </div>
@@ -34,6 +30,7 @@ const Home = () => {
       </section>
 
       <section className="features container">
+        <h2 className="sr-only">Mobile emissions testing benefits</h2>
         <div className="feature-card">
           <div className="feature-icon-wrapper">
             <Clock size={32} />
