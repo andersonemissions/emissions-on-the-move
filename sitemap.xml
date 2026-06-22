@@ -2,27 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.emissionsonthemove.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
-    <loc>https://www.emissionsonthemove.com/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.emissionsonthemove.com/pricing/</loc>
+    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
-    <loc>https://www.emissionsonthemove.com/book-now</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.emissionsonthemove.com/book-now/</loc>
+    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
-    <loc>https://www.emissionsonthemove.com/faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.emissionsonthemove.com/faq/</loc>
+    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
-    <loc>https://www.emissionsonthemove.com/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.emissionsonthemove.com/contact/</loc>
+    <lastmod>2026-06-22</lastmod>
   </url>
 </urlset>
