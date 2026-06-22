@@ -54,9 +54,32 @@ const businessSchema = {
   },
   address: {
     "@type": "PostalAddress",
+    addressLocality: "Provo",
     addressRegion: "UT",
     addressCountry: "US",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 40.2338,
+    longitude: -111.6585,
+  },
+  serviceArea: {
+    "@type": "GeoCircle",
+    geoMidpoint: {
+      "@type": "GeoCoordinates",
+      latitude: 40.2338,
+      longitude: -111.6585,
+    },
+    geoRadius: 40000,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+  ],
   sameAs: [
     "https://instagram.com/emissionsonthemove",
     "https://www.facebook.com/profile.php?id=61590274666347",
