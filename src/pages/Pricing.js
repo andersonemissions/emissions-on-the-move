@@ -82,7 +82,7 @@ const Pricing = () => {
 
         <div className="pricing-note">
           <span>
-            <strong>Multiple cars?</strong> Add additional vehicles at <strong>$40 each</strong>!
+            <strong>Multiple cars?</strong> Add additional vehicles at <strong>$45 each</strong>!
           </span>
         </div>
       </div>
