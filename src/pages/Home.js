@@ -12,7 +12,7 @@ const Home = () => {
         <div className="container" style={{ width: "100%" }}>
           <div className="hero-content">
             <h1>
-              Emissions Due? <br /><span className="text-green">We Come To You!</span>
+              Emissions Testing, <br /><span className="text-green">Wherever You Are.</span>
             </h1>
             <p className="hero-subtitle">
               Convenient, reliable mobile emissions testing. Serving all of Utah County!
