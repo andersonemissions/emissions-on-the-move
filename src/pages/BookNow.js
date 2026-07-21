@@ -25,7 +25,7 @@ const BookNow = () => {
     [navigate, bookingType]
   );
 
-  // Bulletproof window postMessage listener for Cal.com events (works on FREE plan!)
+  // Fallback: listen for raw postMessage events from the Cal.com iframe
   useEffect(() => {
     const handleMessage = (event) => {
       try {
@@ -56,7 +56,6 @@ const BookNow = () => {
           (str.includes("booking") && (str.includes("success") || str.includes("scheduled") || str.includes("confirmed")));
 
         if (isSuccess) {
-          console.log("Cal.com booking success detected via postMessage!", rawData);
           goToConfirmation(typeof rawData === "object" ? rawData : null);
         }
       } catch (err) {
@@ -66,6 +65,57 @@ const BookNow = () => {
 
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
+  }, [goToConfirmation]);
+
+  // Primary: Load Cal.com embed SDK for reliable bookingSuccessful events
+  // Note: This may cause harmless "Script error." overlays in dev mode only.
+  // In production builds these are silently ignored.
+  useEffect(() => {
+    // Skip SDK in development to avoid noisy error overlay
+    if (process.env.NODE_ENV === "development") return;
+
+    const loadCalEmbed = () => {
+      if (window.Cal) return; // already loaded
+
+      (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+          let cal = C.Cal;
+          let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            let api = function () { p(api, arguments); };
+            let namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else {
+              p(cal, ar);
+            }
+            return;
+          }
+          p(cal, ar);
+        };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      window.Cal("init", { origin: "https://cal.com" });
+      window.Cal("on", {
+        action: "bookingSuccessful",
+        callback: (e) => {
+          goToConfirmation(e?.detail);
+        },
+      });
+    };
+
+    loadCalEmbed();
   }, [goToConfirmation]);
 
   return (
