@@ -29,6 +29,11 @@ export const routeMetadata = {
     description:
       "Contact Emissions on the Move for mobile emissions testing in Utah County. Call or text (385) 392-6701, email andersonemissions@gmail.com, or send us a message.",
   },
+  "/booking-confirmation/": {
+    title: "Booking Confirmed | Emissions on the Move",
+    description:
+      "Your mobile emissions inspection appointment is confirmed! We look forward to testing your vehicle in Utah County.",
+  },
 };
 
 const normalizePath = (path) => {

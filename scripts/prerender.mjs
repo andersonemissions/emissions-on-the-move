@@ -8,7 +8,7 @@ import puppeteer from "puppeteer";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const buildDir = path.join(projectRoot, "build");
 const shellHtml = await readFile(path.join(buildDir, "index.html"), "utf8");
-const routes = ["/", "/pricing/", "/faq/", "/book-now/", "/contact/"];
+const routes = ["/", "/pricing/", "/faq/", "/book-now/", "/contact/", "/booking-confirmation/"];
 
 const mimeTypes = {
   ".css": "text/css; charset=utf-8",

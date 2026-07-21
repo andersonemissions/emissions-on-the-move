@@ -1,19 +1,72 @@
-import React from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import React, { useEffect, useCallback } from "react";
+import { useSearchParams, Link, useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
 
 const BookNow = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const bookingType = searchParams.get("type") || "exact";
 
   // Configure your Cal.com event types here
   const calComEvents = {
     exact: "monson-anderson-bu4hen/exact-time", // $70 - Exact time
-    flexible: "monson-anderson-bu4hen/2-hour-window", // $60 - Flexible window (create this in Cal.com)
+    flexible: "monson-anderson-bu4hen/2-hour-window", // $60 - Flexible window
   };
 
   const calComLink = calComEvents[bookingType] || calComEvents.exact;
   const isExact = bookingType === "exact";
+
+  const goToConfirmation = useCallback(
+    (details) => {
+      navigate(`/booking-confirmation/?type=${bookingType}`, {
+        state: { bookingType, details },
+      });
+    },
+    [navigate, bookingType]
+  );
+
+  // Bulletproof window postMessage listener for Cal.com events (works on FREE plan!)
+  useEffect(() => {
+    const handleMessage = (event) => {
+      try {
+        if (!event || !event.data) return;
+
+        let rawData = event.data;
+        let str = "";
+
+        if (typeof rawData === "string") {
+          str = rawData.toLowerCase();
+          try {
+            rawData = JSON.parse(rawData);
+          } catch (e) {
+            // string wasn't valid JSON
+          }
+        } else if (typeof rawData === "object" && rawData !== null) {
+          try {
+            str = JSON.stringify(rawData).toLowerCase();
+          } catch (e) {
+            str = "";
+          }
+        }
+
+        // Check if message indicates booking completion
+        const isSuccess =
+          str.includes("bookingsuccessful") ||
+          str.includes("cal:bookingsuccessful") ||
+          (str.includes("booking") && (str.includes("success") || str.includes("scheduled") || str.includes("confirmed")));
+
+        if (isSuccess) {
+          console.log("Cal.com booking success detected via postMessage!", rawData);
+          goToConfirmation(typeof rawData === "object" ? rawData : null);
+        }
+      } catch (err) {
+        // Silently handle cross-origin message parsing
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [goToConfirmation]);
 
   return (
     <div className="page book-now-page">
@@ -55,24 +108,26 @@ const BookNow = () => {
         </p>
 
         {calComLink ? (
-          /* Cal.com Embed - Full Screen */
-          <div
-            className="calendar-container"
-            style={{
-              width: "100%",
-              height: "calc(100vh - 200px)",
-              minHeight: "500px",
-            }}
-          >
-            <iframe
-              src={`https://cal.com/${calComLink}`}
+          <div style={{ width: "100%" }}>
+            {/* Cal.com Embed Container */}
+            <div
+              className="calendar-container"
               style={{
                 width: "100%",
-                height: "100%",
-                border: "none",
+                height: "calc(100vh - 220px)",
+                minHeight: "520px",
               }}
-              title="Book an Appointment"
-            ></iframe>
+            >
+              <iframe
+                src={`https://cal.com/${calComLink}?embed=true`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+                title="Book an Appointment"
+              ></iframe>
+            </div>
           </div>
         ) : (
           /* Placeholder until Cal.com is set up */
@@ -104,10 +159,10 @@ const BookNow = () => {
                 flexWrap: "wrap",
               }}
             >
-              <a href="tel:5551234567" className="btn btn-primary">
-                📞 Call (555) 123-4567
+              <a href="tel:3853926701" className="btn btn-primary">
+                📞 Call (385) 392-6701
               </a>
-              <a href="sms:5551234567" className="btn btn-outline">
+              <a href="sms:3853926701" className="btn btn-outline">
                 💬 Text Us
               </a>
             </div>

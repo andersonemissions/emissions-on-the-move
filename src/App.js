@@ -7,6 +7,7 @@ import FAQ from "./pages/FAQ";
 import BookNow from "./pages/BookNow";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import BookingConfirmation from "./pages/BookingConfirmation";
 import "./App.css";
 
 import TextUsButton from "./components/TextUsButton";
@@ -25,6 +26,10 @@ function App() {
             <Route path="/book-now/" element={<BookNow />} />
             <Route path="/pricing/" element={<Pricing />} />
             <Route path="/contact/" element={<Contact />} />
+            <Route path="/booking-confirmation/" element={<BookingConfirmation />} />
+            <Route path="/booking-confirmation" element={<BookingConfirmation />} />
+            <Route path="/confirmation/" element={<BookingConfirmation />} />
+            <Route path="/confirmation" element={<BookingConfirmation />} />
           </Routes>
         </main>
         <TextUsButton />
