@@ -6,6 +6,11 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (typeof window.gtag === "function") {
+      window.gtag("config", "AW-18327978864", {
+        page_path: pathname,
+      });
+    }
   }, [pathname]);
 
   return null;
