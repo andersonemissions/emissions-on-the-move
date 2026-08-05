@@ -1,4 +1,5 @@
 import React from "react";
+import { PRICES, lowestPrice, usd } from "../data/pricing";
 
 const SITE_URL = "https://www.emissionsonthemove.com";
 const SOCIAL_IMAGE = `${SITE_URL}/eotm_with_car_and_employees.jpeg`;
@@ -10,9 +11,12 @@ export const routeMetadata = {
       "Skip the lines. Emissions on the Move brings certified mobile emissions testing to your home or work anywhere in Utah County. Book online or call (385) 392-6701.",
   },
   "/pricing/": {
-    title: "Emissions Testing Prices from $60 | Emissions on the Move",
-    description:
-      "Affordable mobile emissions testing in Utah County. Flexible 2-hour window for $60, exact appointment time for $70, additional vehicles $50 each. No hidden fees.",
+    title: `Emissions Testing Prices from ${usd(lowestPrice)} | Emissions on the Move`,
+    description: `Affordable mobile emissions testing in Utah County. Flexible 2-hour window for ${usd(
+      PRICES.flexible
+    )}, exact appointment time for ${usd(PRICES.exact)}, additional vehicles ${usd(
+      PRICES.additionalVehicle
+    )} each. No hidden fees.`,
   },
   "/faq/": {
     title: "Emissions Testing FAQ | Emissions on the Move",
@@ -97,13 +101,13 @@ const businessSchema = {
         "@type": "Offer",
         name: "Flexible Window Mobile Emissions Test",
         priceCurrency: "USD",
-        price: "60",
+        price: String(PRICES.flexible),
       },
       {
         "@type": "Offer",
         name: "Exact Time Mobile Emissions Test",
         priceCurrency: "USD",
-        price: "70",
+        price: String(PRICES.exact),
       },
     ],
   },

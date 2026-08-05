@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback } from "react";
 import { useSearchParams, Link, useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
+import { PRICES, usd } from "../data/pricing";
 
 const BookNow = () => {
   const [searchParams] = useSearchParams();
@@ -9,8 +10,8 @@ const BookNow = () => {
 
   // Configure your Cal.com event types here
   const calComEvents = {
-    exact: "monson-anderson-bu4hen/exact-time", // $70 - Exact time
-    flexible: "monson-anderson-bu4hen/2-hour-window", // $60 - Flexible window
+    exact: "monson-anderson-bu4hen/exact-time",
+    flexible: "monson-anderson-bu4hen/2-hour-window",
   };
 
   const calComLink = calComEvents[bookingType] || calComEvents.exact;
@@ -137,13 +138,13 @@ const BookNow = () => {
             to="/book-now/?type=exact"
             className={`btn ${isExact ? "btn-primary" : "btn-outline"}`}
           >
-            Exact Time ($70)
+            Exact Time ({usd(PRICES.exact)})
           </Link>
           <Link
             to="/book-now/?type=flexible"
             className={`btn ${!isExact ? "btn-primary" : "btn-outline"}`}
           >
-            Flexible Window ($60)
+            Flexible Window ({usd(PRICES.flexible)})
           </Link>
         </div>
 
