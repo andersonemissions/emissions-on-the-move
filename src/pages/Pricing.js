@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import SEO from "../components/SEO";
+import { PRICES, usd } from "../data/pricing";
 
 const Pricing = () => {
   return (
@@ -19,7 +20,7 @@ const Pricing = () => {
             <div className="pricing-header">
               <h2>Exact Time</h2>
               <div className="price-container">
-                <span className="price-num">$70</span>
+                <span className="price-num">{usd(PRICES.exact)}</span>
                 <span className="price-period">/ vehicle</span>
               </div>
             </div>
@@ -52,7 +53,7 @@ const Pricing = () => {
             <div className="pricing-header">
               <h2>Flexible Window</h2>
               <div className="price-container">
-                <span className="price-num">$60</span>
+                <span className="price-num">{usd(PRICES.flexible)}</span>
                 <span className="price-period">/ vehicle</span>
               </div>
             </div>
@@ -82,7 +83,8 @@ const Pricing = () => {
 
         <div className="pricing-note">
           <span>
-            <strong>Multiple cars?</strong> Add additional vehicles at <strong>$50 each</strong>!
+            <strong>Multiple cars?</strong> Add additional vehicles at{" "}
+            <strong>{usd(PRICES.additionalVehicle)} each</strong>!
           </span>
         </div>
       </div>
