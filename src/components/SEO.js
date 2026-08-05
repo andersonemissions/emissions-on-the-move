@@ -12,7 +12,7 @@ export const routeMetadata = {
   "/pricing/": {
     title: "Emissions Testing Prices from $60 | Emissions on the Move",
     description:
-      "Affordable mobile emissions testing in Utah County. Flexible 2-hour window for $60, exact appointment time for $70, additional vehicles $40 each. No hidden fees.",
+      "Affordable mobile emissions testing in Utah County. Flexible 2-hour window for $60, exact appointment time for $70, additional vehicles $50 each. No hidden fees.",
   },
   "/faq/": {
     title: "Emissions Testing FAQ | Emissions on the Move",
