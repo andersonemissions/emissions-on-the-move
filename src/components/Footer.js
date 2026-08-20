@@ -36,11 +36,11 @@ const Footer = () => {
           <ul>
             <li>
               <a
-                href="tel:3853926701"
+                href="tel:3855354917"
                 style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}
               >
                 <Phone size={16} />
-                <span>(385) 392-6701</span>
+                <span>(385) 535-4917</span>
               </a>
             </li>
             <li>

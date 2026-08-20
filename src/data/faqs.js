@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "Do you offer fleet services?",
     answer:
-      "Yes! We offer special pricing and scheduling for business fleets. Check our Pricing page for more info or give us a call! 385-392-6701",
+      "Yes! We offer special pricing and scheduling for business fleets. Check our Pricing page for more info or give us a call! 385-535-4917",
   },
 ];
 

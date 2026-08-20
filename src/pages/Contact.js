@@ -48,7 +48,7 @@ const Contact = () => {
 
           <div className="contact-info-list">
             <a
-              href="tel:3853926701"
+              href="tel:3855354917"
               className="contact-info-item"
               style={{ textDecoration: "none" }}
             >
@@ -57,7 +57,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-text">
                 <h2>Call or Text</h2>
-                <p>(385) 392-6701</p>
+                <p>(385) 535-4917</p>
               </div>
             </a>
 

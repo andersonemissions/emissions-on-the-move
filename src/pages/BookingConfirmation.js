@@ -27,7 +27,7 @@ const BookingConfirmation = () => {
           <h1 className="confirmation-title">Thank You for Booking Your Emissions Test!</h1>
           <p className="confirmation-subtitle">
             You'll receive a confirmation email shortly. Don't hesitate to reach out with any questions — call or text us at{" "}
-            <a href="tel:3853926701" style={{ color: "var(--primary)", fontWeight: 700 }}>(385) 392-6701</a>!
+            <a href="tel:3855354917" style={{ color: "var(--primary)", fontWeight: 700 }}>(385) 535-4917</a>!
           </p>
         </div>
 
@@ -76,8 +76,8 @@ const BookingConfirmation = () => {
             <h3>Questions or need to reschedule?</h3>
             <p>We're here to help — call or text us anytime!</p>
           </div>
-          <a href="tel:3853926701" className="btn btn-outline-white">
-            <Phone size={18} /> (385) 392-6701
+          <a href="tel:3855354917" className="btn btn-outline-white">
+            <Phone size={18} /> (385) 535-4917
           </a>
         </div>
 

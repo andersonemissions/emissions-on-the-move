@@ -8,7 +8,7 @@ export const routeMetadata = {
   "/": {
     title: "Mobile Emissions Testing in Utah County | Emissions on the Move",
     description:
-      "Skip the lines. Emissions on the Move brings certified mobile emissions testing to your home or work anywhere in Utah County. Book online or call (385) 392-6701.",
+      "Skip the lines. Emissions on the Move brings certified mobile emissions testing to your home or work anywhere in Utah County. Book online or call (385) 535-4917.",
   },
   "/pricing/": {
     title: `Emissions Testing Prices from ${usd(lowestPrice)} | Emissions on the Move`,
@@ -31,7 +31,7 @@ export const routeMetadata = {
   "/contact/": {
     title: "Contact Us | Emissions on the Move",
     description:
-      "Contact Emissions on the Move for mobile emissions testing in Utah County. Call or text (385) 392-6701, email andersonemissions@gmail.com, or send us a message.",
+      "Contact Emissions on the Move for mobile emissions testing in Utah County. Call or text (385) 535-4917, email andersonemissions@gmail.com, or send us a message.",
   },
   "/booking-confirmation/": {
     title: "Booking Confirmed | Emissions on the Move",
@@ -52,7 +52,7 @@ const businessSchema = {
   description:
     "Mobile vehicle emissions testing serving all of Utah County, Utah. We come to your home or work.",
   url: `${SITE_URL}/`,
-  telephone: "+1-385-392-6701",
+  telephone: "+1-385-535-4917",
   email: "andersonemissions@gmail.com",
   image: SOCIAL_IMAGE,
   logo: `${SITE_URL}/logo.png`,

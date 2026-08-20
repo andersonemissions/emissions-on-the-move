@@ -46,7 +46,7 @@ This is the single highest-leverage thing you can do, and it's free.
    Pleasant Grove, Springville, Saratoga Springs, Eagle Mountain, Payson).
 3. Category: **"Emissions Inspection Station"** (primary). Add "Auto Repair Shop" if
    relevant.
-4. Fill in everything: phone (385) 392-6701, website, hours, and the **services** (mobile
+4. Fill in everything: phone (385) 535-4917, website, hours, and the **services** (mobile
    emissions test, fleet testing) with prices.
 5. Add **photos** — the car, the team, a test in progress. Profiles with photos get far
    more clicks.

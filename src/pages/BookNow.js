@@ -210,10 +210,10 @@ const BookNow = () => {
                 flexWrap: "wrap",
               }}
             >
-              <a href="tel:3853926701" className="btn btn-primary">
-                📞 Call (385) 392-6701
+              <a href="tel:3855354917" className="btn btn-primary">
+                📞 Call (385) 535-4917
               </a>
-              <a href="sms:3853926701" className="btn btn-outline">
+              <a href="sms:3855354917" className="btn btn-outline">
                 💬 Text Us
               </a>
             </div>
