@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.37925fd9.css",
-    "main.js": "/static/js/main.e9ccdead.js",
+    "main.css": "/static/css/main.15e770aa.css",
+    "main.js": "/static/js/main.c6c17f36.js",
     "static/js/453.dfa657df.chunk.js": "/static/js/453.dfa657df.chunk.js",
     "static/media/eotm_with_car_and_employees.jpeg": "/static/media/eotm_with_car_and_employees.1f3fbb94e6b727e4be65.jpeg",
     "static/media/eotm_with_car_and_employees.webp": "/static/media/eotm_with_car_and_employees.f12e3c78f586b116a0da.webp",
+    "static/media/on-the-spot-renewal-logo.png": "/static/media/on-the-spot-renewal-logo.91d3ee20f3a3eeafbb13.png",
     "index.html": "/index.html",
-    "main.37925fd9.css.map": "/static/css/main.37925fd9.css.map",
-    "main.e9ccdead.js.map": "/static/js/main.e9ccdead.js.map",
+    "main.15e770aa.css.map": "/static/css/main.15e770aa.css.map",
+    "main.c6c17f36.js.map": "/static/js/main.c6c17f36.js.map",
     "453.dfa657df.chunk.js.map": "/static/js/453.dfa657df.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37925fd9.css",
-    "static/js/main.e9ccdead.js"
+    "static/css/main.15e770aa.css",
+    "static/js/main.c6c17f36.js"
   ]
 }
