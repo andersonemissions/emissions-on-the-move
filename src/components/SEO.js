@@ -6,9 +6,9 @@ const SOCIAL_IMAGE = `${SITE_URL}/eotm_with_car_and_employees.jpeg`;
 
 export const routeMetadata = {
   "/": {
-    title: "Mobile Emissions Testing in Utah County | Emissions on the Move",
+    title: "Mobile Emissions Testing & On-The-Spot DMV Renewals | Emissions on the Move",
     description:
-      "Skip the lines. Emissions on the Move brings certified mobile emissions testing to your home or work anywhere in Utah County. Book online or call (385) 535-4917.",
+      "Skip the lines. Emissions on the Move brings certified mobile emissions testing, authorized on-the-spot DMV registration renewals, and VIN inspections to your home or work in Utah County. Book online or call (385) 535-4917.",
   },
   "/pricing/": {
     title: `Emissions Testing Prices from ${usd(lowestPrice)} | Emissions on the Move`,
@@ -19,9 +19,9 @@ export const routeMetadata = {
     )} each. No hidden fees.`,
   },
   "/faq/": {
-    title: "Emissions Testing FAQ | Emissions on the Move",
+    title: "Emissions Testing & On-The-Spot Renewal FAQ | Emissions on the Move",
     description:
-      "Answers to common questions about mobile emissions testing in Utah County: service area, whether you need to be present, failed tests, fleet services, and more.",
+      "Common questions about mobile emissions testing, authorized On The Spot registration renewals, decals on-site, VIN inspections (TC-661), retest guarantees, and fleet service in Utah County.",
   },
   "/book-now/": {
     title: "Book Mobile Emissions Testing in Utah County | Emissions on the Move",
@@ -50,7 +50,7 @@ const businessSchema = {
   "@id": `${SITE_URL}/#business`,
   name: "Emissions on the Move",
   description:
-    "Mobile vehicle emissions testing serving all of Utah County, Utah. We come to your home or work.",
+    "Mobile vehicle emissions testing, authorized On-The-Spot DMV registration renewals, and VIN inspections serving all of Utah County, Utah. We come to your home or work.",
   url: `${SITE_URL}/`,
   telephone: "+1-385-535-4917",
   email: "andersonemissions@gmail.com",

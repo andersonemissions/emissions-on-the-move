@@ -87,6 +87,17 @@ const Pricing = () => {
             <strong>{usd(PRICES.additionalVehicle)} each</strong>!
           </span>
         </div>
+
+        <p
+          style={{
+            textAlign: "center",
+            marginTop: "1.5rem",
+            color: "var(--text-light)",
+            fontSize: "0.95rem",
+          }}
+        >
+          ✨ <strong>DMV Registration Renewals & VIN Inspections:</strong> We are an authorized On-The-Spot station. We can process your registration renewal, issue official decals, and complete Form TC-661 VIN inspections right during your visit!
+        </p>
       </div>
     </div>
   );
