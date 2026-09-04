@@ -51,8 +51,9 @@ const Home = () => {
               src={otsLogo}
               alt="Authorized Station On The SPOT Renewal"
               className="ots-badge-img"
-              width="180"
-              height="101"
+              width="96"
+              height="54"
+              fetchPriority="high"
             />
             <div className="trust-badge-text">
               <strong>Authorized Station</strong>
@@ -121,6 +122,7 @@ const Home = () => {
 
           {/* Service 2: On The Spot Renewal */}
           <div className="service-card service-card-highlight">
+            <div className="service-floating-badge">★ DMV Authorized</div>
             <div className="service-icon-wrapper">
               <Award size={32} />
             </div>
@@ -244,6 +246,11 @@ const Home = () => {
             <a href="tel:3855354917" className="btn btn-outline">
               <Phone size={18} /> (385) 535-4917
             </a>
+          </div>
+          <div className="home-cta-trust">
+            <span>✓ No waiting in DMV lines</span>
+            <span>✓ Official state decals issued</span>
+            <span>✓ State-certified mobile technicians</span>
           </div>
         </div>
       </section>

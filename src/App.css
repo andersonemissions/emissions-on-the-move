@@ -444,8 +444,8 @@ ul {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
 .service-card {
@@ -453,7 +453,7 @@ ul {
   padding: 2.25rem 1.75rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow-subtle);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  border: 2px solid rgba(15, 23, 42, 0.05);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -463,12 +463,27 @@ ul {
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(0, 179, 86, 0.2);
+  border-color: rgba(0, 179, 86, 0.25);
 }
 
 .service-card-highlight {
-  border: 2px solid var(--primary);
+  border-color: var(--primary);
   background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-mint) 100%);
+}
+
+.service-floating-badge {
+  position: absolute;
+  top: -12px;
+  right: 18px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 179, 86, 0.3);
 }
 
 .service-icon-wrapper {
@@ -523,19 +538,20 @@ ul {
 
 .service-bullets {
   list-style: none;
-  border-top: 1px solid rgba(15, 23, 42, 0.04);
+  border-top: 1px solid rgba(15, 23, 42, 0.05);
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.65rem;
 }
 
 .service-bullets li {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+  gap: 0.6rem;
+  font-size: 0.9rem;
   color: var(--text-main);
+  line-height: 1.4;
 }
 
 .bullet-icon {
@@ -553,28 +569,44 @@ ul {
 
 .home-steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .home-steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 48px;
+    left: calc(16.6% + var(--spacing-md));
+    right: calc(16.6% + var(--spacing-md));
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--primary) 0, var(--primary) 6px, transparent 6px, transparent 12px);
+    opacity: 0.35;
+    z-index: 1;
+  }
 }
 
 .home-step-card {
-  background: var(--light);
+  background: var(--white);
   border-radius: var(--radius);
   padding: 2.25rem 1.75rem;
   position: relative;
   text-align: center;
-  border: 1px solid rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: var(--shadow-subtle);
   transition: var(--transition-smooth);
+  z-index: 2;
 }
 
 .home-step-card:hover {
   transform: translateY(-4px);
-  background: var(--white);
-  box-shadow: var(--shadow-subtle);
-  border-color: rgba(0, 179, 86, 0.15);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(0, 179, 86, 0.2);
 }
 
 .home-step-number {
@@ -591,6 +623,7 @@ ul {
   justify-content: center;
   margin: 0 auto 1.25rem;
   box-shadow: 0 4px 10px rgba(0, 179, 86, 0.25);
+  position: relative;
 }
 
 .home-step-card h3 {
@@ -654,6 +687,10 @@ ul {
   flex-wrap: wrap;
 }
 
+.home-cta-buttons .btn-primary {
+  box-shadow: 0 4px 16px rgba(0, 179, 86, 0.4);
+}
+
 .home-cta-buttons .btn-outline {
   border-color: rgba(255, 255, 255, 0.4);
   color: var(--white);
@@ -663,6 +700,24 @@ ul {
   background-color: var(--white);
   color: var(--dark);
   border-color: var(--white);
+}
+
+.home-cta-trust {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
 }
 
 @media (max-width: 900px) {
@@ -676,6 +731,16 @@ ul {
   .trust-points {
     justify-content: center;
     gap: 1.5rem;
+  }
+  .home-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -698,6 +763,23 @@ ul {
     font-size: 1.85rem;
   }
 }
+
+@media (max-width: 480px) {
+  .trust-badge-ots {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .trust-points {
+    gap: 1rem;
+  }
+  .home-cta-trust {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
 
 
 /* -- Pricing Page -- */
