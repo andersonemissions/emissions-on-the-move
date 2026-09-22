@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import SEO from "../components/SEO";
 import { PRICES, usd } from "../data/pricing";
+import otsLogo from "../assets/on-the-spot-renewal-logo.png";
 
 const Pricing = () => {
   return (
@@ -88,16 +89,35 @@ const Pricing = () => {
           </span>
         </div>
 
-        <p
-          style={{
-            textAlign: "center",
-            marginTop: "1.5rem",
-            color: "var(--text-light)",
-            fontSize: "0.95rem",
-          }}
-        >
-          ✨ <strong>DMV Registration Renewals:</strong> As an authorized On-The-Spot station, we process your renewal and issue official license plate decals during your visit. <strong>VIN Inspections:</strong> We also complete Form TC-661 on-site for out-of-state titles.
-        </p>
+        {/* On-The-Spot Renewal & Additional Services Callout */}
+        <div className="pricing-ots-card">
+          <div className="pricing-ots-badge-wrapper">
+            <Link to="/services/#on-the-spot" title="Utah DMV Authorized On-The-Spot Renewal Station">
+              <img
+                src={otsLogo}
+                alt="Utah On The Spot Renewal Authorized Station"
+                className="pricing-ots-decal"
+                width="240"
+                height="72"
+              />
+            </Link>
+          </div>
+          <div className="pricing-ots-content">
+            <div className="pricing-ots-title-row">
+              <span className="service-pill service-pill-highlight">Utah DMV Authorized</span>
+              <h3>On-The-Spot Registration Renewal & VIN Inspections</h3>
+            </div>
+            <p>
+              Need updated registration stickers or an out-of-state VIN inspection? As an authorized On-The-Spot station,
+              we renew your registration and hand you official license plate decals and registration card right during your visit.
+            </p>
+            <div className="pricing-ots-actions">
+              <Link to="/services/#on-the-spot" className="btn btn-outline btn-sm">
+                How On-The-Spot Renewal Works <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

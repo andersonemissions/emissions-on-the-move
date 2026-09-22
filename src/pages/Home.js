@@ -46,20 +46,24 @@ const Home = () => {
       {/* Trust & Accreditation Banner */}
       <section className="trust-bar">
         <div className="container trust-bar-container">
-          <div className="trust-badge-ots">
+          <Link
+            to="/services/#on-the-spot"
+            className="trust-badge-ots-link"
+            title="Learn more about our Utah DMV Authorized On-The-Spot Renewal Station"
+          >
             <img
               src={otsLogo}
               alt="Authorized Station On The SPOT Renewal"
-              className="ots-badge-img"
-              width="96"
-              height="54"
+              className="ots-badge-img ots-badge-img-lg"
+              width="214"
+              height="64"
               fetchPriority="high"
             />
             <div className="trust-badge-text">
               <strong>Authorized Station</strong>
-              <span>Utah DMV On-The-Spot Renewals</span>
+              <span>Utah DMV On-The-Spot Renewals →</span>
             </div>
-          </div>
+          </Link>
           <div className="trust-divider" />
           <div className="trust-points">
             <div className="trust-point-item">
@@ -117,6 +121,9 @@ const Home = () => {
                 <Check size={16} className="bullet-icon" /> Free 15-day retest if needed
               </li>
             </ul>
+            <Link to="/services/#emissions-testing" className="service-card-link">
+              Learn More <ArrowRight size={14} />
+            </Link>
           </div>
 
           {/* Service 2: On The Spot Renewal */}
@@ -142,6 +149,9 @@ const Home = () => {
                 <Check size={16} className="bullet-icon" /> No DMV visit required
               </li>
             </ul>
+            <Link to="/services/#on-the-spot" className="service-card-link">
+              Learn More About Renewals <ArrowRight size={14} />
+            </Link>
           </div>
 
           {/* Service 3: VIN Inspections */}
@@ -166,6 +176,9 @@ const Home = () => {
                 <Check size={16} className="bullet-icon" /> Done at your location
               </li>
             </ul>
+            <Link to="/services/#vin-inspections" className="service-card-link">
+              Learn More About TC-661 <ArrowRight size={14} />
+            </Link>
           </div>
 
           {/* Service 4: Fleet Services */}
@@ -190,6 +203,9 @@ const Home = () => {
                 <Check size={16} className="bullet-icon" /> Consolidated reporting & billing
               </li>
             </ul>
+            <Link to="/services/#fleet-testing" className="service-card-link">
+              Learn More About Fleets <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>

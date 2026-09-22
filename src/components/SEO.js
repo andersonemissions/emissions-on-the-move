@@ -10,6 +10,11 @@ export const routeMetadata = {
     description:
       "Skip the lines. Certified mobile emissions testing, on-the-spot DMV registration renewals, and VIN inspections at your home or work in Utah County. Book online or call (385) 535-4917.",
   },
+  "/services/": {
+    title: "Mobile Emissions Testing, DMV Renewals & VIN Inspections | Emissions on the Move",
+    description:
+      "Explore our Utah County mobile automotive services: state-certified emissions testing, authorized On-The-Spot DMV registration renewals, Form TC-661 VIN inspections, and business fleet testing.",
+  },
   "/pricing/": {
     title: `Emissions Testing Prices from ${usd(lowestPrice)} | Emissions on the Move`,
     description: `Affordable mobile emissions testing in Utah County. Flexible 2-hour window for ${usd(
