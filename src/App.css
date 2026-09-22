@@ -1823,26 +1823,45 @@ ul {
   flex-shrink: 0;
 }
 
-@media (max-width: 720px) {
+.service-tab-btn .tab-label-mobile {
+  display: none;
+}
+
+.service-tab-btn .tab-label-full {
+  display: inline;
+}
+
+@media (max-width: 768px) {
   .services-sticky-tabs-bar {
-    padding: 0.65rem 0 0.5rem;
+    padding: 0.5rem 0;
   }
   .services-tabs-container {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 0.2rem 1rem 0.4rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .services-tabs-container::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+    gap: 8px;
+    padding: 0.15rem 0.75rem;
+    width: 100%;
+    overflow-x: visible;
+    flex-wrap: wrap;
   }
   .service-tab-btn {
-    white-space: nowrap;
-    flex-shrink: 0;
-    font-size: 0.88rem;
-    padding: 0.55rem 1.1rem;
+    width: 100%;
+    margin: 0;
+    padding: 0.55rem 0.4rem;
+    font-size: 0.82rem;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+  .service-tab-btn .tab-label-full {
+    display: none;
+  }
+  .service-tab-btn .tab-label-mobile {
+    display: inline;
   }
 }
 
@@ -1906,20 +1925,155 @@ ul {
   }
 }
 
+/* On mobile, completely hide floating side arrows so they NEVER block reading text */
 @media (max-width: 768px) {
   .service-nav-arrow {
-    top: 210px;
-    width: 46px;
-    height: 46px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: none !important;
   }
-  .service-nav-arrow-prev {
-    left: 8px;
+}
+
+/* Mobile Stepper Controls (Top of active card) */
+.services-mobile-stepper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .services-mobile-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+    padding: 0.45rem 0.65rem;
+    background: #ffffff;
+    border: 1.5px solid rgba(15, 23, 42, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   }
-  .service-nav-arrow-next {
-    right: 8px;
+
+  .mobile-stepper-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f8fafc;
+    border: 1.5px solid rgba(15, 23, 42, 0.1);
+    color: var(--dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.4rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 40px;
+    touch-action: manipulation;
+  }
+
+  .mobile-stepper-btn:active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+  }
+
+  .mobile-stepper-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .stepper-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .stepper-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .stepper-dot.active {
+    width: 18px;
+    border-radius: 4px;
+    background: var(--primary);
+  }
+
+  .stepper-text {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+/* Mobile Bottom Navigation (Bottom of active card) */
+.services-mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .services-mobile-bottom-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    gap: 10px;
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+
+  .mobile-bottom-nav-btn {
+    display: flex;
+    align-items: center;
+    padding: 0.65rem 0.75rem;
+    background: #ffffff;
+    border: 1.5px solid rgba(15, 23, 42, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    color: var(--dark);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    min-height: 48px;
+    touch-action: manipulation;
+  }
+
+  .mobile-bottom-nav-btn.next {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .mobile-bottom-nav-btn:active {
+    background: var(--bg-mint);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .mobile-bottom-nav-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6px;
+    overflow: hidden;
+  }
+
+  .mobile-bottom-nav-text .nav-sub {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+  }
+
+  .mobile-bottom-nav-text .nav-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -2210,6 +2364,13 @@ ul {
   }
   .services-hero h1 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-detail-card {
+    padding: 1.5rem 1.15rem;
+    min-height: auto;
   }
 }
 
