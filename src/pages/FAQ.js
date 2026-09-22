@@ -53,7 +53,7 @@ const FAQ = () => {
     <div className="page faq-page page-fade-in">
       <SEO path="/faq/" structuredData={faqSchema} />
       <div className="container">
-        <h1>Frequently Asked Questions</h1>
+        <h1>Common Questions</h1>
         <div className="faq-wrapper">
           {faqs.map((faq, index) => (
             <FAQItem key={faq.question} index={index} question={faq.question} answer={faq.answer} />

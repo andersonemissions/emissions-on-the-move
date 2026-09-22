@@ -28,8 +28,8 @@ const Home = () => {
               <span className="text-green">Wherever You Are.</span>
             </h1>
             <p className="hero-subtitle">
-              Fast, certified mobile emissions testing, on-the-spot registration renewals,
-              and VIN inspections. We come directly to your driveway or workplace in Utah County!
+              Certified mobile emissions testing, on-the-spot registration renewals,
+              and VIN inspections at your home or workplace anywhere in Utah County.
             </p>
             <div className="hero-buttons">
               <Link to="/book-now/" className="btn btn-primary">
@@ -87,11 +87,10 @@ const Home = () => {
       {/* Our Services Section */}
       <section className="services-section container">
         <div className="section-header">
-          <span className="section-eyebrow">Comprehensive Mobile Services</span>
-          <h2>Everything You Need, Right at Your Door</h2>
+          <span className="section-eyebrow">Mobile Services</span>
+          <h2>What We Do</h2>
           <p className="section-subtitle">
-            Skip the long DMV queues and noisy mechanics. We handle your complete inspection
-            and registration in one convenient visit.
+            No DMV lines, no shop visits. We handle your inspection and renewal in one quick stop.
           </p>
         </div>
 
@@ -104,15 +103,15 @@ const Home = () => {
             <span className="service-pill">Utah County Certified</span>
             <h3>Mobile Emissions Testing</h3>
             <p>
-              Full OBD-II scan and visual inspection for passenger vehicles, trucks, and SUVs.
-              Results are uploaded immediately and electronically to the Utah DMV.
+              Full OBD-II scan and visual inspection for cars, trucks, and SUVs.
+              Results upload electronically to the Utah DMV.
             </p>
             <ul className="service-bullets">
               <li>
                 <Check size={16} className="bullet-icon" /> 10–15 minute on-site test
               </li>
               <li>
-                <Check size={16} className="bullet-icon" /> Instant digital certificate
+                <Check size={16} className="bullet-icon" /> Instant electronic DMV upload
               </li>
               <li>
                 <Check size={16} className="bullet-icon" /> Free 15-day retest if needed
@@ -129,18 +128,18 @@ const Home = () => {
             <span className="service-pill service-pill-highlight">Official DMV Decals</span>
             <h3>On-The-Spot Registration Renewal</h3>
             <p>
-              Don't wait in line at the DMV or wait weeks for the mail. As an authorized On The Spot
-              station, we process your registration and hand you your official sticker on the spot.
+              Renew your registration and get official license plate decals handed to you on
+              the spot—no DMV trip or waiting on the mail.
             </p>
             <ul className="service-bullets">
               <li>
-                <Check size={16} className="bullet-icon" /> Get new license plate decals
+                <Check size={16} className="bullet-icon" /> Official license plate stickers issued
               </li>
               <li>
                 <Check size={16} className="bullet-icon" /> Updated registration card in hand
               </li>
               <li>
-                <Check size={16} className="bullet-icon" /> Zero DMV trip required
+                <Check size={16} className="bullet-icon" /> No DMV visit required
               </li>
             </ul>
           </div>
@@ -153,18 +152,18 @@ const Home = () => {
             <span className="service-pill">Form TC-661</span>
             <h3>Mobile VIN Inspections</h3>
             <p>
-              Moving to Utah or bought an out-of-state vehicle? Our certified inspectors verify your
-              VIN and complete official Utah State Form TC-661 during your appointment.
+              Moving to Utah or bought an out-of-state vehicle? We verify your VIN and
+              complete official Utah Form TC-661 right in your driveway.
             </p>
             <ul className="service-bullets">
               <li>
-                <Check size={16} className="bullet-icon" /> Official TC-661 paperwork
+                <Check size={16} className="bullet-icon" /> Official Form TC-661 completed
               </li>
               <li>
-                <Check size={16} className="bullet-icon" /> Out-of-state vehicle titling
+                <Check size={16} className="bullet-icon" /> Required for out-of-state titles
               </li>
               <li>
-                <Check size={16} className="bullet-icon" /> Done right in your driveway
+                <Check size={16} className="bullet-icon" /> Done at your location
               </li>
             </ul>
           </div>
@@ -177,18 +176,18 @@ const Home = () => {
             <span className="service-pill">Commercial & Fleets</span>
             <h3>Business Fleet Testing</h3>
             <p>
-              Keep your company vehicles compliant without disrupting business operations. We come to
-              your lot or facility to test your entire fleet with volume pricing and custom scheduling.
+              Keep company vehicles compliant without downtime. We test your entire fleet
+              on-site with volume discounts and flexible scheduling.
             </p>
             <ul className="service-bullets">
               <li>
-                <Check size={16} className="bullet-icon" /> Volume fleet discounts
+                <Check size={16} className="bullet-icon" /> Volume discounts
               </li>
               <li>
-                <Check size={16} className="bullet-icon" /> On-site at your business
+                <Check size={16} className="bullet-icon" /> On-site at your facility
               </li>
               <li>
-                <Check size={16} className="bullet-icon" /> Consolidated reports & billing
+                <Check size={16} className="bullet-icon" /> Consolidated reporting & billing
               </li>
             </ul>
           </div>
@@ -199,10 +198,10 @@ const Home = () => {
       <section className="how-it-works-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Quick & Painless</span>
+            <span className="section-eyebrow">How It Works</span>
             <h2>How Mobile Emissions Works</h2>
             <p className="section-subtitle">
-              Three simple steps from scheduling to fresh registration stickers on your plate.
+              From booking to new stickers on your plate.
             </p>
           </div>
 
@@ -211,21 +210,21 @@ const Home = () => {
               <div className="home-step-number">1</div>
               <h3>Book in 60 Seconds</h3>
               <p>
-                Pick your date and choose an exact appointment time or a flexible 2-hour window that fits your day.
+                Pick your date and choose an exact time or a discounted 2-hour arrival window.
               </p>
             </div>
             <div className="home-step-card">
               <div className="home-step-number">2</div>
               <h3>We Come To You</h3>
               <p>
-                Our state-certified technician arrives at your home, workplace, or job site anywhere in Utah County.
+                Our certified technician arrives at your home or workplace anywhere in Utah County.
               </p>
             </div>
             <div className="home-step-card">
               <div className="home-step-number">3</div>
               <h3>Pass, Renew & Done</h3>
               <p>
-                We complete the test in ~10 minutes, process your renewal, and hand you your official decal.
+                We test your vehicle in ~10 minutes, process your renewal, and hand you your new decals.
               </p>
             </div>
           </div>
@@ -237,7 +236,7 @@ const Home = () => {
         <div className="home-cta-card">
           <h2>Ready to Skip the DMV Line?</h2>
           <p>
-            Book your mobile emissions test and On-The-Spot renewal online now, or call/text our Utah County team.
+            Book your test and registration renewal online, or call/text us anytime.
           </p>
           <div className="home-cta-buttons">
             <Link to="/book-now/" className="btn btn-primary">
@@ -248,9 +247,9 @@ const Home = () => {
             </a>
           </div>
           <div className="home-cta-trust">
-            <span>✓ No waiting in DMV lines</span>
-            <span>✓ Official state decals issued</span>
-            <span>✓ State-certified mobile technicians</span>
+            <span>✓ Skip the DMV line</span>
+            <span>✓ Official decals issued on site</span>
+            <span>✓ State-certified technicians</span>
           </div>
         </div>
       </section>

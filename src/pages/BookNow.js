@@ -158,67 +158,25 @@ const BookNow = () => {
           )}
         </p>
 
-        {calComLink ? (
-          <div style={{ width: "100%" }}>
-            {/* Cal.com Embed Container */}
-            <div
-              className="calendar-container"
-              style={{
-                width: "100%",
-                height: "calc(100vh - 220px)",
-                minHeight: "520px",
-              }}
-            >
-              <iframe
-                src={`https://cal.com/${calComLink}?embed=true`}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-                title="Book an Appointment"
-              ></iframe>
-            </div>
-          </div>
-        ) : (
-          /* Placeholder until Cal.com is set up */
-          <div
-            className="booking-setup-notice"
+        {/* Cal.com Embed Container */}
+        <div
+          className="calendar-container"
+          style={{
+            width: "100%",
+            height: "calc(100vh - 220px)",
+            minHeight: "520px",
+          }}
+        >
+          <iframe
+            src={`https://cal.com/${calComLink}?embed=true`}
             style={{
-              padding: "3rem 2rem",
-              backgroundColor: "#f8fafc",
-              borderRadius: "12px",
-              textAlign: "center",
-              border: "2px dashed #cbd5e1",
-              marginTop: "1rem",
+              width: "100%",
+              height: "100%",
+              border: "none",
             }}
-          >
-            <h2 style={{ marginBottom: "1rem", color: "#334155" }}>
-              📅 Online Booking Coming Soon!
-            </h2>
-            <p style={{ color: "#64748b", marginBottom: "1.5rem" }}>
-              We're setting up our online scheduling system.
-              <br />
-              In the meantime, please contact us directly to book your
-              appointment.
-            </p>
-            <div
-              style={{
-                display: "flex",
-                gap: "1rem",
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              <a href="tel:3855354917" className="btn btn-primary">
-                📞 Call (385) 535-4917
-              </a>
-              <a href="sms:3855354917" className="btn btn-outline">
-                💬 Text Us
-              </a>
-            </div>
-          </div>
-        )}
+            title="Book an Appointment"
+          ></iframe>
+        </div>
       </div>
     </div>
   );

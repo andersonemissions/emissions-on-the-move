@@ -24,18 +24,18 @@ const BookingConfirmation = () => {
             <CheckCircle2 size={56} className="success-icon" />
           </div>
           <span className="confirmation-badge">Appointment Scheduled</span>
-          <h1 className="confirmation-title">Thank You for Booking Your Emissions Test!</h1>
+          <h1 className="confirmation-title">Booking Confirmed!</h1>
           <p className="confirmation-subtitle">
-            You'll receive a confirmation email shortly. Don't hesitate to reach out with any questions — call or text us at{" "}
-            <a href="tel:3855354917" style={{ color: "var(--primary)", fontWeight: 700 }}>(385) 535-4917</a>!
+            A confirmation email is on the way. Questions? Call or text us anytime at{" "}
+            <a href="tel:3855354917" style={{ color: "var(--primary)", fontWeight: 700 }}>(385) 535-4917</a>.
           </p>
         </div>
 
         {/* Booking Summary */}
         <div className="confirmation-details-card" style={{ textAlign: "center" }}>
           <p style={{ fontSize: "1.1rem", color: "var(--text-main)", lineHeight: 1.7, margin: 0 }}>
-            You booked a <strong>{isExact ? "exact time" : "flexible 2-hour window"}</strong> mobile
-            emissions inspection. {isExact ? "We'll arrive at your scheduled time." : "We'll arrive within your selected window."}
+            Your appointment is confirmed for an <strong>{isExact ? "exact time" : "flexible 2-hour window"}</strong> mobile
+            inspection. {isExact ? "We'll arrive at your scheduled time." : "We'll arrive within your selected window."}
           </p>
         </div>
 
@@ -48,7 +48,7 @@ const BookingConfirmation = () => {
               <div className="step-number">1</div>
               <div className="step-content">
                 <h3>Check Your Email</h3>
-                <p>A confirmation with your appointment details is on its way. You'll also get a reminder before your appointment.</p>
+                <p>We've sent your appointment details and will send a reminder before our technician arrives.</p>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ const BookingConfirmation = () => {
               <div className="step-number">2</div>
               <div className="step-content">
                 <h3>We Come to You</h3>
-                <p>Our technician will arrive at your location — no need to drive anywhere or wait in line.</p>
+                <p>Our technician arrives at your location—no driving or waiting in line required.</p>
               </div>
             </div>
 
@@ -64,7 +64,7 @@ const BookingConfirmation = () => {
               <div className="step-number">3</div>
               <div className="step-content">
                 <h3>Quick & Easy Testing</h3>
-                <p>The inspection takes about 10–15 minutes, and you'll get your official documentation right on the spot.</p>
+                <p>Testing takes 10–15 minutes, and we issue official decals and certificates on the spot.</p>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ const BookingConfirmation = () => {
         <div className="confirmation-support-box">
           <div>
             <h3>Questions or need to reschedule?</h3>
-            <p>We're here to help — call or text us anytime!</p>
+            <p>We're here to help — call or text us anytime.</p>
           </div>
           <a href="tel:3855354917" className="btn btn-outline-white">
             <Phone size={18} /> (385) 535-4917

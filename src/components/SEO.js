@@ -8,7 +8,7 @@ export const routeMetadata = {
   "/": {
     title: "Mobile Emissions Testing & On-The-Spot DMV Renewals | Emissions on the Move",
     description:
-      "Skip the lines. Emissions on the Move brings certified mobile emissions testing, authorized on-the-spot DMV registration renewals, and VIN inspections to your home or work in Utah County. Book online or call (385) 535-4917.",
+      "Skip the lines. Certified mobile emissions testing, on-the-spot DMV registration renewals, and VIN inspections at your home or work in Utah County. Book online or call (385) 535-4917.",
   },
   "/pricing/": {
     title: `Emissions Testing Prices from ${usd(lowestPrice)} | Emissions on the Move`,
@@ -21,7 +21,7 @@ export const routeMetadata = {
   "/faq/": {
     title: "Emissions Testing & On-The-Spot Renewal FAQ | Emissions on the Move",
     description:
-      "Common questions about mobile emissions testing, authorized On The Spot registration renewals, decals on-site, VIN inspections (TC-661), retest guarantees, and fleet service in Utah County.",
+      "Answers about mobile emissions testing, On-The-Spot registration renewals, VIN inspections, free retests, and fleet service in Utah County.",
   },
   "/book-now/": {
     title: "Book Mobile Emissions Testing in Utah County | Emissions on the Move",

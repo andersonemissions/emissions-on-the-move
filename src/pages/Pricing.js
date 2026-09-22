@@ -9,7 +9,7 @@ const Pricing = () => {
     <div className="page pricing-page page-fade-in">
       <SEO path="/pricing/" />
       <div className="container">
-        <h1>Our Pricing</h1>
+        <h1>Pricing</h1>
         <p className="subtitle">
           Simple, transparent pricing with no hidden fees.
         </p>
@@ -25,17 +25,17 @@ const Pricing = () => {
               </div>
             </div>
             <p style={{ color: "var(--text-light)", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
-              Perfect for busy days. Book a precise time slot, and we'll arrive on the dot.
+              We arrive at the exact time you pick.
             </p>
             <ul className="pricing-list">
               <li>
-                <Check size={18} className="check-icon" /> Choose your exact appointment time
+                <Check size={18} className="check-icon" /> Best for tight schedules
               </li>
               <li>
-                <Check size={18} className="check-icon" /> Full mobile emission test
+                <Check size={18} className="check-icon" /> Full mobile emissions test
               </li>
               <li>
-                <Check size={18} className="check-icon" /> Instant digital test reports
+                <Check size={18} className="check-icon" /> Instant electronic DMV upload
               </li>
             </ul>
             <Link
@@ -65,10 +65,10 @@ const Pricing = () => {
                 <Check size={18} className="check-icon" /> 2-hour technician arrival window
               </li>
               <li>
-                <Check size={18} className="check-icon" /> Full mobile emission test
+                <Check size={18} className="check-icon" /> Full mobile emissions test
               </li>
               <li>
-                <Check size={18} className="check-icon" /> Instant digital test reports
+                <Check size={18} className="check-icon" /> Instant electronic DMV upload
               </li>
             </ul>
             <Link
@@ -96,7 +96,7 @@ const Pricing = () => {
             fontSize: "0.95rem",
           }}
         >
-          ✨ <strong>DMV Registration Renewals & VIN Inspections:</strong> We are an authorized On-The-Spot station. We can process your registration renewal, issue official decals, and complete Form TC-661 VIN inspections right during your visit!
+          ✨ <strong>DMV Registration Renewals:</strong> As an authorized On-The-Spot station, we process your renewal and issue official license plate decals during your visit. <strong>VIN Inspections:</strong> We also complete Form TC-661 on-site for out-of-state titles.
         </p>
       </div>
     </div>

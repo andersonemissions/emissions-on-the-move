@@ -42,8 +42,7 @@ const Contact = () => {
         <div className="contact-details">
           <h1>Get in Touch</h1>
           <p style={{ color: "var(--text-light)", fontSize: "1.05rem", marginBottom: "2rem" }}>
-            Have questions or need to schedule a special appointment? Reach out
-            to us!
+            Have questions or need custom scheduling? Reach out anytime.
           </p>
 
           <div className="contact-info-list">
@@ -81,7 +80,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-text">
                 <h2>Coverage Area</h2>
-                <p>Testing anywhere in Utah county</p>
+                <p>Serving all of Utah County</p>
               </div>
             </div>
           </div>

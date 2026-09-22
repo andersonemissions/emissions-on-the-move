@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section brand">
           <h2>Emissions on the Move</h2>
-          <p>Convenient, reliable mobile emissions testing. We come to you.</p>
+          <p>Mobile emissions testing, DMV renewals, and VIN inspections across Utah County.</p>
         </div>
 
         <div className="footer-section links">
@@ -76,7 +76,7 @@ const Footer = () => {
             </li>
             <li>
               <MapPin size={16} />{" "}
-              <span>Vehicle emissions testing for Utah County.</span>
+              <span>Serving all of Utah County.</span>
             </li>
           </ul>
         </div>
