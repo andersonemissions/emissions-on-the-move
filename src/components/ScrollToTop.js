@@ -5,7 +5,9 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
+    if (pathname.startsWith("/services")) {
+      window.scrollTo(0, 0);
+    } else if (hash) {
       const elementId = hash.replace("#", "");
       // Small timeout to allow the target page component to mount
       setTimeout(() => {

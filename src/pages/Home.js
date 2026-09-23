@@ -24,8 +24,8 @@ const Home = () => {
         <div className="container" style={{ width: "100%" }}>
           <div className="hero-content">
             <h1>
-              Emissions Testing & DMV Renewals, <br />
-              <span className="text-green">Wherever You Are.</span>
+              Mobile Emissions & DMV Renewals, <br />
+              <span className="text-green">Delivered to Your Driveway.</span>
             </h1>
             <p className="hero-subtitle">
               We come to your home or workplace anywhere in Utah County. Complete
@@ -43,46 +43,55 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Trust & Accreditation Banner */}
+      {/* 3-Pillar Trust Bar */}
       <section className="trust-bar">
-        <div className="container trust-bar-container">
-          <Link
-            to="/services/#on-the-spot"
-            className="trust-badge-ots-link"
-            title="Learn more about our Utah DMV Authorized On-The-Spot Renewal Station"
-          >
-            <img
-              src={otsLogo}
-              alt="Authorized Station On The SPOT Renewal"
-              className="ots-badge-img ots-badge-img-lg"
-              width="214"
-              height="64"
-              fetchPriority="high"
-            />
-            <div className="trust-badge-text">
-              <strong>Authorized Station</strong>
-              <span>Utah DMV On-The-Spot Renewals →</span>
+        <div className="container trust-grid-3">
+          <div className="trust-grid-item">
+            <Clock className="trust-icon" size={22} />
+            <div className="trust-item-text">
+              <strong>10-Minute</strong> Driveway Service
             </div>
-          </Link>
-          <div className="trust-divider" />
-          <div className="trust-points">
-            <div className="trust-point-item">
-              <Clock className="trust-icon" size={20} />
-              <span>
-                <strong>10-Minute</strong> Driveway Service
-              </span>
+          </div>
+          <div className="trust-grid-item">
+            <ShieldCheck className="trust-icon" size={22} />
+            <div className="trust-item-text">
+              <strong>State-Certified</strong> Technicians
             </div>
-            <div className="trust-point-item">
-              <ShieldCheck className="trust-icon" size={20} />
-              <span>
-                <strong>State-Certified</strong> Technicians
-              </span>
+          </div>
+          <div className="trust-grid-item">
+            <CheckCircle2 className="trust-icon" size={22} />
+            <div className="trust-item-text">
+              <strong>15-Day Free</strong> Retest Guarantee
             </div>
-            <div className="trust-point-item">
-              <CheckCircle2 className="trust-icon" size={20} />
-              <span>
-                <strong>15-Day Free</strong> Retest Guarantee
-              </span>
+          </div>
+        </div>
+      </section>
+
+      {/* On-The-Spot DMV Accreditation Banner */}
+      <section className="ots-banner-section">
+        <div className="container">
+          <div className="ots-banner-card">
+            <div className="ots-banner-logo-wrap">
+              <img
+                src={otsLogo}
+                alt="Utah DMV Authorized Station On The SPOT Renewal"
+                className="ots-banner-logo"
+                width="220"
+                height="64"
+                fetchPriority="high"
+              />
+            </div>
+            <div className="ots-banner-content">
+              <div className="ots-banner-badge">Official State Program</div>
+              <h3>Utah DMV Authorized On-The-Spot Station</h3>
+              <p>
+                Skip the DMV lines and state inspection lanes. We test your vehicle and print your official DMV registration decals right in your driveway.
+              </p>
+            </div>
+            <div className="ots-banner-action">
+              <Link to="/services/#on-the-spot" className="btn btn-outline">
+                How It Works <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </div>
