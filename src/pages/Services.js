@@ -7,7 +7,6 @@ import {
   Truck,
   Check,
   ArrowRight,
-  Clock,
   Phone,
   CheckCircle2,
   ExternalLink,
@@ -95,9 +94,9 @@ const Services = () => {
       {/* Simplified Compact Header */}
       <section className="services-compact-header">
         <div className="container">
-          <h1>Our Mobile Services</h1>
+          <h1>Our Services</h1>
           <p className="subtitle">
-            Everything you need to stay street legal in Utah County—handled right in your driveway.
+            We come to you anywhere in Utah County.
           </p>
         </div>
       </section>
@@ -211,45 +210,41 @@ const Services = () => {
                 <div className="service-header-badge">
                   <span className="service-pill service-pill-highlight">Utah DMV Authorized</span>
                 </div>
-                <h2>On-The-Spot Registration Renewal (OTS)</h2>
+                <h2>On-The-Spot Renewal (OTS)</h2>
                 <p className="service-lead">
-                  Skip the DMV lines and the postal wait. As an authorized Utah On-The-Spot station,
-                  we process your renewal electronically and hand you official license plate decals
-                  and updated registration right in your driveway.
+                  Renew your registration during your test. We process it electronically and hand
+                  you your stickers and updated registration card.
                 </p>
 
                 <div className="service-feature-points">
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Official State Decals Affixed On-Site</strong>
-                      <p>New expiration stickers placed directly on your license plate during your visit.</p>
+                      <strong>Stickers applied to your plate</strong>
                     </div>
                   </div>
 
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Updated Registration Card Printed</strong>
-                      <p>Receive your official, valid Utah registration card immediately.</p>
+                      <strong>Registration card printed on site</strong>
                     </div>
                   </div>
 
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Instant Electronic DMV Sync</strong>
-                      <p>Vehicle records update directly in the state database with zero delay.</p>
+                      <strong>DMV record updated instantly</strong>
                     </div>
                   </div>
                 </div>
 
                 <div className="service-actions">
                   <Link to="/book-now/" className="btn btn-primary">
-                    Book With Registration Renewal <ArrowRight size={18} />
+                    Book Now <ArrowRight size={18} />
                   </Link>
                   <Link to="/pricing/" className="btn btn-outline">
-                    View Pricing & Options
+                    View Pricing
                   </Link>
                 </div>
               </div>
@@ -263,22 +258,12 @@ const Services = () => {
                     width="344"
                     height="103"
                   />
-                  <div className="ots-stat-bar" style={{ marginBottom: "1.25rem", borderTop: "none", paddingTop: 0 }}>
-                    <div className="ots-stat">
-                      <Clock size={20} />
-                      <span>~10 Min Total Visit</span>
-                    </div>
-                    <div className="ots-stat">
-                      <CheckCircle2 size={20} />
-                      <span>0 DMV Trips</span>
-                    </div>
-                  </div>
                   <div className="service-checklist-box" style={{ margin: 0, textAlign: "left" }}>
-                    <h3>What to Have Ready:</h3>
+                    <h3>Have ready</h3>
                     <ul>
                       <li><Check size={16} className="bullet-icon" /> DMV renewal reminder or current registration</li>
                       <li><Check size={16} className="bullet-icon" /> Vehicle keys</li>
-                      <li><Check size={16} className="bullet-icon" /> Payment for state registration fees + service</li>
+                      <li><Check size={16} className="bullet-icon" /> Payment for state fees and service</li>
                     </ul>
                   </div>
                 </div>
@@ -300,45 +285,35 @@ const Services = () => {
                 <div className="service-header-badge">
                   <span className="service-pill">Utah County Certified</span>
                 </div>
-                <h2>Mobile Emissions Testing</h2>
+                <h2>Emissions Testing</h2>
                 <p className="service-lead">
-                  Fast, compliant mobile emissions testing performed right in your driveway, garage,
-                  or parking lot.
+                  Computerized testing for 1996 and newer gas and hybrid vehicles, at your home,
+                  work, or parking lot.
                 </p>
 
                 <div className="service-feature-points">
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>State-Certified Inspection</strong>
-                      <p>Quick computerized diagnostic check for 1996 and newer gas and hybrid vehicles.</p>
+                      <strong>Results sent to the state instantly</strong>
                     </div>
                   </div>
 
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Instant Electronic Certificate</strong>
-                      <p>Passed inspections transmit immediately to the Utah County and state database.</p>
-                    </div>
-                  </div>
-
-                  <div className="feature-point">
-                    <CheckCircle2 size={20} className="feature-icon" />
-                    <div>
-                      <strong>Free 15-Day Retest Guarantee</strong>
-                      <p>If repairs are needed, we come back and retest your vehicle for free within 15 days.</p>
+                      <strong>Free retest within 15 days</strong>
                     </div>
                   </div>
                 </div>
 
                 <div className="pricing-preview-badge">
-                  <span>From <strong>{usd(PRICES.flexible)}</strong> for flexible 2-hr window • <strong>{usd(PRICES.exact)}</strong> for exact time</span>
+                  <span><strong>{usd(PRICES.flexible)}</strong> flexible 2-hour window • <strong>{usd(PRICES.exact)}</strong> exact time</span>
                 </div>
 
                 <div className="service-actions">
                   <Link to="/book-now/" className="btn btn-primary">
-                    Book Emissions Test <ArrowRight size={18} />
+                    Book Now <ArrowRight size={18} />
                   </Link>
                   <Link to="/faq/" className="btn btn-outline">
                     Emissions FAQs
@@ -349,12 +324,8 @@ const Services = () => {
               <div className="service-detail-sidebox">
                 <div className="info-card-box">
                   <ShieldCheck size={40} className="box-icon" />
-                  <h3>Vehicle Eligibility</h3>
-                  <p>Standard 1996 and newer OBD-II passenger cars, light trucks, and SUVs registered anywhere in Utah.</p>
-                  <div className="box-highlight">
-                    <strong>Multi-Vehicle Discount</strong>
-                    <p>Test additional vehicles at the same visit for only {usd(PRICES.additionalVehicle)} each.</p>
-                  </div>
+                  <h3>Eligibility</h3>
+                  <p>1996+ OBD-II cars, light trucks, and SUVs registered anywhere in Utah. Add vehicles for {usd(PRICES.additionalVehicle)} each.</p>
                 </div>
               </div>
             </div>
@@ -374,41 +345,38 @@ const Services = () => {
                 <div className="service-header-badge">
                   <span className="service-pill">Out-of-State & Titles</span>
                 </div>
-                <h2>Mobile VIN Inspections (TC-661)</h2>
+                <h2>VIN Inspections (TC-661)</h2>
                 <p className="service-lead">
-                  Required when titling an out-of-state vehicle, trailer, or RV in Utah. Our certified
-                  inspectors physically verify your VIN and sign official Utah Tax Commission Form TC-661 right at your doorstep.
+                  Required to title an out-of-state vehicle, trailer, or RV in Utah. We verify your
+                  VIN and sign Form TC-661 at your door.
                 </p>
 
                 <div className="service-feature-points">
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Certified Inspection Completed On-Site</strong>
-                      <p>Fully signed Form TC-661 documentation ready for your Utah title application.</p>
+                      <strong>Signed TC-661 ready for your title application</strong>
                     </div>
                   </div>
 
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Pair With Emissions in One Visit</strong>
-                      <p>Combine VIN verification, emissions testing, and renewal stickers in a single appointment.</p>
+                      <strong>Combine with emissions and renewal in one visit</strong>
                     </div>
                   </div>
 
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>No Towing or Trip Permits Needed</strong>
-                      <p>Save time and avoid driving unregistered vehicles across town to an inspection station.</p>
+                      <strong>No towing or trip permits</strong>
                     </div>
                   </div>
                 </div>
 
                 <div className="service-actions">
                   <Link to="/book-now/" className="btn btn-primary">
-                    Book VIN Inspection <ArrowRight size={18} />
+                    Book Now <ArrowRight size={18} />
                   </Link>
                   <a href="tel:3855354917" className="btn btn-outline">
                     <Phone size={18} /> Call Us
@@ -419,15 +387,15 @@ const Services = () => {
               <div className="service-detail-sidebox">
                 <div className="info-card-box">
                   <FileText size={40} className="box-icon" />
-                  <h3>When Is Form TC-661 Required?</h3>
+                  <h3>When is TC-661 required?</h3>
                   <ul className="simple-check-list">
                     <li>Vehicles titled outside Utah</li>
-                    <li>New residents moving to Utah</li>
-                    <li>Out-of-state purchases & dealer transfers</li>
+                    <li>New Utah residents</li>
+                    <li>Out-of-state purchases and dealer transfers</li>
                     <li>Trailers, motorhomes, and commercial units</li>
                   </ul>
                   <div className="box-highlight" style={{ marginTop: "1.25rem" }}>
-                    <strong>Official State Document:</strong>
+                    <strong>Official form:</strong>
                     <a
                       href="https://files.tax.utah.gov/tax/forms/current/tc-661.pdf"
                       target="_blank"
@@ -465,44 +433,40 @@ const Services = () => {
                 <div className="service-header-badge">
                   <span className="service-pill">Commercial & Corporate</span>
                 </div>
-                <h2>Business & Commercial Fleet Testing</h2>
+                <h2>Fleet Testing</h2>
                 <p className="service-lead">
-                  Keep company vehicles compliant without taking them out of service or wasting employee hours.
-                  We inspect your fleet on-site at your yard, warehouse, or office in a single scheduled visit.
+                  We test your company vehicles at your yard, warehouse, or office in one scheduled visit.
                 </p>
 
                 <div className="service-feature-points">
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Tiered Volume Rates</strong>
-                      <p>Discounted per-vehicle pricing structured around your fleet size.</p>
+                      <strong>Volume pricing by fleet size</strong>
                     </div>
                   </div>
 
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Non-Disruptive Scheduling</strong>
-                      <p>Early morning, off-shift, or phased visits so active jobs stay on schedule.</p>
+                      <strong>Off-shift or phased scheduling</strong>
                     </div>
                   </div>
 
                   <div className="feature-point">
                     <CheckCircle2 size={20} className="feature-icon" />
                     <div>
-                      <strong>Consolidated Invoicing & Reports</strong>
-                      <p>Itemized digital invoice with electronic certificates ready for corporate accounting.</p>
+                      <strong>One invoice, all certificates</strong>
                     </div>
                   </div>
                 </div>
 
                 <div className="service-actions">
                   <a href="tel:3855354917" className="btn btn-primary">
-                    <Phone size={18} /> Call (385) 535-4917 for Fleet Quote
+                    <Phone size={18} /> Call (385) 535-4917
                   </a>
                   <Link to="/contact/" className="btn btn-outline">
-                    Request Fleet Information
+                    Request Fleet Info
                   </Link>
                 </div>
               </div>
@@ -510,12 +474,11 @@ const Services = () => {
               <div className="service-detail-sidebox">
                 <div className="info-card-box">
                   <Truck size={40} className="box-icon" />
-                  <h3>Fleet Program Highlights</h3>
+                  <h3>Also included</h3>
                   <ul className="simple-check-list">
-                    <li>On-site registration renewals & decals</li>
-                    <li>Annual compliance tracking & reminders</li>
-                    <li>Dedicated account contact & priority booking</li>
-                    <li>Passenger cars, pickups, & commercial vans</li>
+                    <li>On-site renewals</li>
+                    <li>Annual compliance reminders</li>
+                    <li>Dedicated account contact</li>
                   </ul>
                 </div>
               </div>
@@ -558,13 +521,10 @@ const Services = () => {
       {/* Services Bottom CTA */}
       <section className="services-bottom-cta container">
         <div className="home-cta-card">
-          <h2>Ready to Schedule Your Mobile Service?</h2>
-          <p>
-            Choose your date and time online, or contact us directly with any questions.
-          </p>
+          <h2>Ready to book?</h2>
           <div className="home-cta-buttons">
             <Link to="/book-now/" className="btn btn-primary">
-              Book Online Now <ArrowRight size={18} />
+              Book Now <ArrowRight size={18} />
             </Link>
             <a href="tel:3855354917" className="btn btn-outline">
               <Phone size={18} /> (385) 535-4917

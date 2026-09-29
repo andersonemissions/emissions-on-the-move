@@ -1,53 +1,43 @@
 const faqs = [
   {
-    question: "Can I get my registration renewed and stickers on the spot?",
+    question: "Can I renew my registration and get stickers on the spot?",
     answer:
-      "Yes. We are an authorized Utah On The Spot (OTS) renewal station. Once your vehicle passes, we renew your registration and hand you official decals and your registration card. No DMV trip needed.",
+      "Yes. We're an authorized Utah On-The-Spot (OTS) station. After your vehicle passes, we renew your registration and give you your stickers and registration card.",
   },
   {
-    question: "Do you handle VIN inspections?",
+    question: "Do you do VIN inspections?",
     answer:
-      "Yes. If you moved to Utah or bought an out-of-state vehicle, our certified technicians verify your VIN and complete official Utah Form TC-661 on-site during your visit.",
+      "Yes. We verify your VIN and complete Utah Form TC-661 on site, for new residents and out-of-state purchases.",
   },
   {
     question: "Are you state-certified?",
     answer:
-      "Yes. We are state-certified for emissions testing and authorized by the Utah DMV for On-The-Spot renewals. All passing results and renewals upload directly to the Utah DMV database.",
+      "Yes, for emissions testing, and authorized by the Utah DMV for OTS renewals. Results upload directly to the DMV.",
   },
   {
-    question: "Do I need to be present for the inspection?",
+    question: "Do I need to be there?",
     answer:
-      "No. As long as your vehicle is accessible and we have the keys, you don't need to wait with the car. The test takes about 10–15 minutes.",
+      "No. Leave the car accessible and the keys available. No warm-up or other prep needed. The test takes 10–15 minutes.",
   },
   {
     question: "What vehicles can you test?",
     answer:
-      "We test all standard 1996 and newer OBD-II passenger cars, trucks, and SUVs. For vintage vehicles, diesels, or specialty models, call or text us at (385) 535-4917 before booking.",
+      "1996 and newer OBD-II cars, trucks, and SUVs. For vintage, diesel, or specialty vehicles, call or text (385) 535-4917 before booking.",
   },
   {
     question: "What areas do you serve?",
     answer:
-      "We serve all of Utah County, including Provo, Orem, Lehi, American Fork, Pleasant Grove, Spanish Fork, Springville, and Saratoga Springs. Your vehicle can be registered anywhere in Utah—the appointment just needs to be within Utah County.",
+      "All of Utah County, including Provo, Orem, Lehi, American Fork, Pleasant Grove, Spanish Fork, Springville, and Saratoga Springs. Your vehicle can be registered anywhere in Utah.",
   },
   {
-    question: "Do I need to do anything to prepare?",
+    question: "What if my vehicle fails?",
     answer:
-      "No prep needed. Just park in an accessible spot and have your keys available. You don't need to warm up the engine beforehand.",
-  },
-  {
-    question: "What happens if my vehicle fails?",
-    answer:
-      "We provide a printed diagnostic report detailing the failure codes and recommended next steps. Once repaired, you receive a free retest within 15 days.",
-  },
-  {
-    question: "What if I need repairs after failing?",
-    answer:
-      "We focus strictly on inspections and renewals to keep our testing 100% unbiased. Take our report to any mechanic, then contact us for your free 15-day retest.",
+      "You get a printed report with the failure codes. Take it to any mechanic (we only inspect, which keeps testing unbiased), then retest free within 15 days.",
   },
   {
     question: "Do you offer fleet services?",
     answer:
-      "Yes. We offer volume discounts and dedicated on-site scheduling for company fleets across Utah County. Call or text (385) 535-4917 to set up fleet testing.",
+      "Yes. Volume discounts and on-site scheduling across Utah County. Call or text (385) 535-4917.",
   },
 ];
 

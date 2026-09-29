@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   ArrowRight,
   Phone,
-  Check,
 } from "lucide-react";
 import SEO from "../components/SEO";
 import otsLogo from "../assets/on-the-spot-renewal-logo.png";
@@ -28,8 +27,7 @@ const Home = () => {
               <span className="text-green">Delivered to Your Driveway.</span>
             </h1>
             <p className="hero-subtitle">
-              We come to your home or workplace anywhere in Utah County. Complete
-              your inspection and get your new DMV stickers in about 10 minutes.
+              We come to you anywhere in Utah County. Get tested and renewed in 10–15 minutes.
             </p>
             <div className="hero-buttons">
               <Link to="/book-now/" className="btn btn-primary">
@@ -49,19 +47,19 @@ const Home = () => {
           <div className="trust-grid-item">
             <Clock className="trust-icon" size={22} />
             <div className="trust-item-text">
-              <strong>10-Minute</strong> Driveway Service
+              <strong>10–15 minute</strong> visit
             </div>
           </div>
           <div className="trust-grid-item">
             <ShieldCheck className="trust-icon" size={22} />
             <div className="trust-item-text">
-              <strong>State-Certified</strong> Technicians
+              <strong>State-certified</strong> technicians
             </div>
           </div>
           <div className="trust-grid-item">
             <CheckCircle2 className="trust-icon" size={22} />
             <div className="trust-item-text">
-              <strong>15-Day Free</strong> Retest Guarantee
+              <strong>Free 15-day</strong> retest
             </div>
           </div>
         </div>
@@ -85,7 +83,7 @@ const Home = () => {
               <div className="ots-banner-badge">Official State Program</div>
               <h3>Utah DMV Authorized On-The-Spot Station</h3>
               <p>
-                Skip the DMV lines and state inspection lanes. We test your vehicle and print your official DMV registration decals right in your driveway.
+                We print your official registration stickers at your car. No DMV trip.
               </p>
             </div>
             <div className="ots-banner-action">
@@ -100,116 +98,52 @@ const Home = () => {
       {/* Our Services Section */}
       <section className="services-section container">
         <div className="section-header">
-          <span className="section-eyebrow">Mobile Services</span>
           <h2>What We Do</h2>
-          <p className="section-subtitle">
-            No DMV lines, no shop visits. We handle your inspection and renewal in one quick stop.
-          </p>
         </div>
 
         <div className="services-grid">
-          {/* Service 1: Emissions Testing */}
           <div className="service-card">
             <div className="service-icon-wrapper">
               <ShieldCheck size={32} />
             </div>
-            <span className="service-pill">Utah County Certified</span>
-            <h3>Mobile Emissions Testing</h3>
-            <p>
-              Fast, state-certified vehicle emissions inspection performed right in your driveway.
-            </p>
-            <ul className="service-bullets">
-              <li>
-                <Check size={16} className="bullet-icon" /> 10–15 minute on-site test
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> Instant electronic DMV upload
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> Free 15-day retest guarantee
-              </li>
-            </ul>
+            <h3>Emissions Testing</h3>
+            <p>State-certified testing at your home or work.</p>
             <Link to="/services/#emissions-testing" className="service-card-link">
-              Learn More <ArrowRight size={14} />
+              Details <ArrowRight size={14} />
             </Link>
           </div>
 
-          {/* Service 2: On The Spot Renewal */}
           <div className="service-card service-card-highlight">
             <div className="service-floating-badge">★ DMV Authorized</div>
             <div className="service-icon-wrapper">
               <Award size={32} />
             </div>
-            <span className="service-pill service-pill-highlight">Official DMV Decals</span>
-            <h3>On-The-Spot Registration Renewal</h3>
-            <p>
-              Renew your registration during your test—skip the DMV lines and postal wait entirely.
-            </p>
-            <ul className="service-bullets">
-              <li>
-                <Check size={16} className="bullet-icon" /> Official state decals affixed on-site
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> Updated registration card printed
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> Instant electronic DMV sync
-              </li>
-            </ul>
+            <h3>On-The-Spot Renewal</h3>
+            <p>Renew during your test and get your stickers on the spot.</p>
             <Link to="/services/#on-the-spot" className="service-card-link">
-              Learn More About Renewals <ArrowRight size={14} />
+              Details <ArrowRight size={14} />
             </Link>
           </div>
 
-          {/* Service 3: VIN Inspections */}
           <div className="service-card">
             <div className="service-icon-wrapper">
               <FileText size={32} />
             </div>
-            <span className="service-pill">Out-of-State & Titles</span>
-            <h3>Mobile VIN Inspections</h3>
-            <p>
-              Official Utah State Tax Commission Form TC-661 completed directly at your doorstep.
-            </p>
-            <ul className="service-bullets">
-              <li>
-                <Check size={16} className="bullet-icon" /> Required for out-of-state titles
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> State-certified physical verification
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> Combine with emissions in 1 visit
-              </li>
-            </ul>
+            <h3>VIN Inspections</h3>
+            <p>Form TC-661 for out-of-state vehicles, completed at your door.</p>
             <Link to="/services/#vin-inspections" className="service-card-link">
-              Learn More About VINs <ArrowRight size={14} />
+              Details <ArrowRight size={14} />
             </Link>
           </div>
 
-          {/* Service 4: Fleet Services */}
           <div className="service-card">
             <div className="service-icon-wrapper">
               <Truck size={32} />
             </div>
-            <span className="service-pill">Commercial & Fleets</span>
-            <h3>Business Fleet Testing</h3>
-            <p>
-              Keep company vehicles compliant without taking them off the road or wasting employee hours.
-            </p>
-            <ul className="service-bullets">
-              <li>
-                <Check size={16} className="bullet-icon" /> Volume discounts for multiple units
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> Scheduled at your yard or facility
-              </li>
-              <li>
-                <Check size={16} className="bullet-icon" /> Consolidated invoicing & reports
-              </li>
-            </ul>
+            <h3>Fleet Testing</h3>
+            <p>Scheduled testing at your yard or office, with volume discounts.</p>
             <Link to="/services/#fleet-testing" className="service-card-link">
-              Learn More About Fleets <ArrowRight size={14} />
+              Details <ArrowRight size={14} />
             </Link>
           </div>
         </div>
@@ -219,33 +153,29 @@ const Home = () => {
       <section className="how-it-works-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">How It Works</span>
-            <h2>How Mobile Emissions Works</h2>
-            <p className="section-subtitle">
-              From booking to new stickers on your plate.
-            </p>
+            <h2>How It Works</h2>
           </div>
 
           <div className="home-steps-grid">
             <div className="home-step-card">
               <div className="home-step-number">1</div>
-              <h3>Book in 60 Seconds</h3>
+              <h3>Book online</h3>
               <p>
-                Pick your day and choose an exact appointment time or a discounted 2-hour window.
+                Pick an exact time or a cheaper 2-hour window.
               </p>
             </div>
             <div className="home-step-card">
               <div className="home-step-number">2</div>
-              <h3>We Come To You</h3>
+              <h3>We come to you</h3>
               <p>
-                A certified technician arrives equipped to test your vehicle right where it's parked.
+                A technician tests your vehicle where it's parked.
               </p>
             </div>
             <div className="home-step-card">
               <div className="home-step-number">3</div>
-              <h3>Renew & Drive</h3>
+              <h3>Renew and go</h3>
               <p>
-                We complete your inspection, renew your registration, and apply new decals on the spot.
+                We renew your registration and apply your new stickers.
               </p>
             </div>
           </div>
@@ -255,13 +185,10 @@ const Home = () => {
       {/* Why Choose Us & CTA Section */}
       <section className="home-cta-section container">
         <div className="home-cta-card">
-          <h2>Ready to Skip the DMV Line?</h2>
-          <p>
-            Book your test and registration renewal online, or call/text us anytime.
-          </p>
+          <h2>Ready to book?</h2>
           <div className="home-cta-buttons">
             <Link to="/book-now/" className="btn btn-primary">
-              Book Online Now <ArrowRight size={18} />
+              Book Now <ArrowRight size={18} />
             </Link>
             <a href="tel:3855354917" className="btn btn-outline">
               <Phone size={18} /> (385) 535-4917
